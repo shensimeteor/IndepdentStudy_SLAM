@@ -11,6 +11,23 @@ void Burgers::setConvenient(){
     printf("R=%f, dtdx=%f, dtdx2=%f, c0=%f, c1=%f\n", R, dtdx, dtdx2, c0, c1);
 }
 
+void Burgers::getConvenient(double* dtdx, double *dtdx2, double *c0, double *c1){
+    *dtdx = this->dtdx;
+    *dtdx2 = this->dtdx2;
+    *c0 = this->c0;
+    *c1 = this->c1;
+}
+
+int Burgers::getNumericOption(){
+    return numeric_option;
+}
+
+void Burgers::setupRandomGenerator(unsigned seed, double noise_mean, double noise_stdv){
+    this->generator = new std::default_random_engine(seed);
+    this->distribution = new std::normal_distribution<double>(noise_mean, noise_stdv);
+    this->noise = new double[nx];
+}
+
 Burgers::Burgers(){
     nx=100;
     istep=0;
@@ -25,7 +42,7 @@ Burgers::Burgers(){
     this->setConvenient();
 }
 
-Burgers::Burgers(int nx, double dx, double R, double dt, int bc_option, double bc_value, int linear_option, double linear_velocity){
+Burgers::Burgers(int nx, double dx, double R, double dt, int bc_option, double bc_value, int linear_option, double linear_velocity, int numeric_option, int stochastic_option, double noise_mean, double noise_stdv){
     this->nx=nx;
     this->dx=dx;
     this->R=R;
@@ -37,6 +54,12 @@ Burgers::Burgers(int nx, double dx, double R, double dt, int bc_option, double b
     preX = new double[nx];
     preX2 = new double[nx];
     this->setConvenient();
+    this->numeric_option = numeric_option;
+    if(stochastic_option == STOCHASTIC_OPTION_GAUSSIAN){
+        this->stochastic_option = stochastic_option;
+        this->seed = std::chrono::system_clock::now().time_since_epoch().count(); 
+        this->setupRandomGenerator(this->seed, noise_mean, noise_stdv);
+    }
 }
 
 
@@ -44,6 +67,13 @@ Burgers::~Burgers(){
     delete curX;
     delete preX;
     delete preX2;
+}
+
+
+void Burgers::addNoiseToCurX(){
+    for(int i=0; i<nx; i++){
+        curX[i] += (*this->distribution)((*(this->generator)));
+    }
 }
 
 void Burgers::setBC(int bc_option, double bc_value){
@@ -54,6 +84,19 @@ void Burgers::setBC(int bc_option, double bc_value){
         this->bc_option = bc_option;
     }else{
         printf("Error, bc_option unknown\n");
+        exit(1);
+    }
+}
+
+void Burgers::setStochasticOption(int stochastic_option, double noise_mean, double noise_stdv){
+    if(stochastic_option == STOCHASTIC_OPTION_GAUSSIAN){
+        this->stochastic_option = stochastic_option;
+        this->noise_mean = noise_mean;
+        this->noise_stdv = noise_stdv;
+    }else if(stochastic_option == STOCHASTIC_OPTION_NONE){
+        this->stochastic_option = stochastic_option;
+    }else{
+        printf("Error, stochastic_option unknown\n");
         exit(1);
     }
 }
@@ -82,7 +125,7 @@ void Burgers::advanceStep(){
     //copy curX -> preX
     istep++; 
     //forward step
-    if(istep==1){
+    if(istep==1 || numeric_option == NUMERIC_OPTION_FORWARD){
         for(int i=0; i<nx; i++){
             preX[i] = curX[i];
         }
@@ -121,6 +164,9 @@ void Burgers::advanceStep(){
                 curX[i] = c0*(preX2[i] + c1*(preX[ip1] + preX[im1] - preX2[i]) - dtdx*(velo*(preX[ip1] - preX[im1])));
             }
         }
+    }
+    if(stochastic_option == STOCHASTIC_OPTION_GAUSSIAN){
+        this->addNoiseToCurX();
     }
 }
 
@@ -182,4 +228,23 @@ void Burgers::advanceNStepsAndOutputBin(int N, const char* file, int output_step
         f.close();
     }
 }
+
+
+//real Xs in file, [Nx+1][Nt]
+double** Burgers::readXs(const char* file, int Nt, int Nx){
+    std::ifstream f(file, std::ios::in | std::ios::binary);
+    if(!f){
+        printf("file not found!\n");
+        exit(1);
+    }else{
+        double** x = new double*[Nt+1];
+        for(int i=0; i<=Nt; i++){
+            x[i]=new double[Nx];
+            f.read((char*)x[i], Nx*sizeof(double));
+        }
+        return x;
+    }
+}
+        
+
 
