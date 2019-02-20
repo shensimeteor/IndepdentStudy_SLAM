@@ -1,0 +1,10 @@
+R=0.000001, dtdx=0.015000, dtdx2=0.000000, c0=0.571429, c1=0.750000
+1960
+N obs read: 1960
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+0  5.442206e+03    0.00e+00    2.27e+02   0.00e+00   0.00e+00  1.00e+04        0    7.53e+00    8.43e+00
+1  4.383517e+02    5.00e+03    5.20e-02   3.05e+01   1.00e+00  3.00e+04        1    2.16e+01    3.01e+01
+2  4.334204e+02    4.93e+00    1.14e-02   8.28e+00   1.00e+00  9.00e+04        1    1.75e+01    4.75e+01
+3  4.331470e+02    2.73e-01    5.75e-03   3.75e+00   1.00e+00  2.70e+05        1    1.63e+01    6.38e+01
+4  4.331335e+02    1.35e-02    1.28e-03   1.11e+00   1.00e+00  8.10e+05        1    1.60e+01    7.99e+01
+Ceres Solver Report: Iterations: 5, Initial cost: 5.442206e+03, Final cost: 4.331335e+02, Termination: CONVERGENCE

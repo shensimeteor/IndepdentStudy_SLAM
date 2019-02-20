@@ -1,0 +1,4 @@
+/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles/rebuild_cache.dir
+/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles/edit_cache.dir
+/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles/run_burgers_slam.x.dir
+/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles/Ceres_Burgers.dir
