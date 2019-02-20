@@ -41,7 +41,6 @@ void Observations::load(const char* obsfile){
     }
     if(this->obs == NULL){ //test number of lines first
         this->nobs = v.size();
-        printf("%d\n", this->nobs);
         this->obs = new SingleObs[this->nobs];
     }
     for(int i=0; i< v.size(); i++){

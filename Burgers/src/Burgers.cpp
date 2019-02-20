@@ -114,7 +114,6 @@ Burgers::Burgers(const char* config_file, const char* config_path){
                 long long lseed;
                 burgers.lookupValue("seed", lseed);
                 seed = (unsigned) lseed;
-                cout<<seed<<endl;
             }
         }
         this->nx = nx;
