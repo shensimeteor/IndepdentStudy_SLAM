@@ -1,0 +1,54 @@
+model = {
+   burgers = {
+       nx = 1000;
+       R = 1e-6;
+       dx = 40000.;
+       dt = 600.;
+
+       bc_option = 2; //1: fixed, 2: periodical
+       bc_fixed_value = 0. // only used when bc_option == 1
+
+       linear_option = 2; //1: linear, 2: nonlinear
+       linear_velocity = 10. // only used when linear_option == 1
+
+       numeric_option = 1; //1: frogleap, 2: forward
+
+       stochastic_option = 1; // 1: none, 2: gaussian err
+       //below 4, only used when stochastic_option == 2
+       stochastic_proc_err_mean = 0.;   
+       stochastic_proc_err_stdv = 0.; 
+       preset_seed = false; 
+       seed = 0; //only used when preset_seed == true
+   };
+};
+
+model_run = {
+   init_condition_pattern = 1; // simply cos 1-wave
+   init_condition_v0 = -20; //default -20
+   n_steps = 1440; //
+   output_x_ratio = 1; //default 1
+   output_t_ratio = 1; //default 1
+   output_filename = "test.bin";
+}
+
+da_experiment = {
+    spinup_steps = 0;
+    window_steps = 288;
+    xbs_file = "xbs200-488.bin";
+    obs_file = "obs.csv";
+    xas_file = "xas.bin";
+    xb0_constraint = true; 
+    xb0_err_stdv = 0.05; 
+    proc_err_stdv = 0.05;
+    max_num_iterations = 10;
+};
+
+da_experiment_cost_groups = {
+    output_cost_groups = true; 
+    output_obs_subgroups = true;
+    obs_subgroup_size = 20; 
+    output_proc_subgroups = true;
+    proc_subgroup_size = 6000;
+    xb_cost_filename = "cost_groups_xb.csv";
+    xa_cost_filename = "cost_groups_xa.csv";
+}

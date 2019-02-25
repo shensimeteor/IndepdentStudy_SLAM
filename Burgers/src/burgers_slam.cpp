@@ -180,6 +180,7 @@ void ResiBlockGroup::add_groups_byComponent(int cnt_resiblock_proc, int cnt_resi
     add_resi_block_group("all_proc", 0, cnt_resiblock_proc-1);
     add_resi_block_group("all_obs", cnt_resiblock_proc, cnt_resiblock_proc+cnt_resiblock_obs-1);
     add_resi_block_group("all_X0", cnt_resiblock_obs+cnt_resiblock_proc, cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0-1);
+    add_resi_block_group("all_all", 0, cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0-1);
 }
 
 void ResiBlockGroup::add_groups_proc_subgroup(int cnt_resiblock_proc, int subgroup_size, int offset){
