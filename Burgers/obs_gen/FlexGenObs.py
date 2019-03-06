@@ -57,9 +57,9 @@ with open(fileconf, "r") as f:
         print("obs set %d --------------" %(cnt))
         print(type(obs_set))
         if(obs_set["obs_x_end"] == -1):
-            obs_set["obs_x_end"] = nx
+            obs_set["obs_x_end"] = nx-1
         if(obs_set["obs_t_end"] == -1):
-            obs_set["obs_t_end"] = Nt
+            obs_set["obs_t_end"] = Nt-1
         obs_xs = list(range(obs_set["obs_x_start"], obs_set["obs_x_end"]+1, obs_set["obs_x_step"]))
         obs_ts = list(range(obs_set["obs_t_start"], obs_set["obs_t_end"]+1, obs_set["obs_t_step"]))
         print("nx_obs=%d, nt_obs=%d, n_obs=%d" %(len(obs_xs), len(obs_ts), len(obs_xs)*len(obs_ts)))
