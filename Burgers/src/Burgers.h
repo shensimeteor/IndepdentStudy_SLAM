@@ -13,7 +13,7 @@
 #define BURGERS_H
 
 class Burgers{
-private:
+protected:
     int nx, istep;
     double dx,R,dt;
     double *curX, *preX, *preX2;

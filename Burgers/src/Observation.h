@@ -18,6 +18,8 @@ public:
 
     Observations(int nobs);
     Observations();
+    //Observations(int nobs, SingleObs* obs);
+    void setByCopy(int nobs, SingleObs* obs);
     void load(const char* obsfile);
     ~Observations();
 

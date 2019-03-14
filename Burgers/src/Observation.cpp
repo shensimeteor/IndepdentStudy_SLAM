@@ -25,9 +25,27 @@ Observations::Observations(int nobs){
     this->nobs = nobs;
     this->obs = new SingleObs[nobs];
 }
+/*
 
+Observations::Observations(int nobs, SingleObs* obs){
+    this->nobs = nobs;
+    this->obs = new SingleObs[nobs];
+    for(int i=0; i<nobs; i++){
+        this->obs[i] = obs[i];
+    }
+}
+*/
 Observations::~Observations(){
     delete this->obs;
+}
+
+
+void Observations::setByCopy(int nobs, SingleObs* obs){
+    this->nobs = nobs;
+    this->obs = new SingleObs[nobs];
+    for(int i=0; i<nobs; i++){
+        this->obs[i] = obs[i];
+    }
 }
 
 void Observations::load(const char* obsfile){

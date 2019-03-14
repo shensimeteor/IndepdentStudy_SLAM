@@ -2,7 +2,7 @@
 cd ../build/
 make
 
-cd ../build_ceres/
-rm CMakeCache.txt
-cmake .
-make
+#cd ../build_ceres/
+#rm CMakeCache.txt
+#cmake .
+#make
