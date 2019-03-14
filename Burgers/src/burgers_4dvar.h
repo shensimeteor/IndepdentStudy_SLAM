@@ -54,11 +54,34 @@ public:
     int left_range_steps=0, right_range_steps=0; 
     int window_steps=288;
     int nt_obs; //number of timegroups of obs
-    int last_step;
-    Observations* obss;
+    int last_step; //step of last obs, i.e. the last step needed to be integrated to
+    Observations* obss; //size of group-size, i.e. each member is obs for each grouped-time
+    int* obs_steps;  // same size with obss, obs_steps[idx] = model-step of that idx
+    int n_obs; //total number of obs (~nt*nx)
     ObsTimeGrouper() {}
     ObsTimeGrouper(int window_steps, int steps_unit, int start_step=0, int left_range_steps=0, int right_range_steps=0);
     void group(Observations& allobs);//allobs must already be sorted by time
+};
+
+
+class SingleTimeObsOperator{
+    int nx_obs=-1;
+    int* obs_xidx;
+public:
+    SingleTimeObsOperator() {}
+    SingleTimeObsOperator(const Observations& obss); //must make sure, obss only contains same time step, or canbe treated as a single time step (for da)
+    void setByObservations(const Observations& obss); 
+}
+
+
+template <class T>
+class Burgers_T: public Burgers{
+    T *curX, *preX, *preX2; 
+public: 
+    Burgers_T() {}
+    Burgers_T(const Burgers& bg); //copy constructor
+    void advanceStep();
+    T* getCurrentX();
 };
 
 
@@ -71,19 +94,19 @@ struct CostFunctorWb0 {
 
 //for strong constraint 4DVar
 struct CostFunctor_4DVar_FullObs{
-    CovModel* B0; //
+    //Covariance term
+    CovModel* B0; 
+    //Obs & ObsOperator 
     ObsTimeGrouper* obstg; //grouped obs
+    SingleTimeObsOperator* obsop;
+    //Model & its template-T version
     Burgers* bg; 
+    Burgers_T* bgt; 
+    //background xb0
+    double* xb0;
+
     CostFunctor_4DVar_FullObs(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0); 
     template <typename T> bool operator()(const T* const w, T* residual) const;
-    static CostFunction* createAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg);
+    static CostFunction* createAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0);
 }; 
 
-template <class T>
-class Burgers_T: public Burgers{
-    T *curX, *preX, *preX2; 
-public: 
-    Burgers_T() {}
-    Burgers_T(const Burgers& bg); //copy constructor
-    void advanceStep();
-};

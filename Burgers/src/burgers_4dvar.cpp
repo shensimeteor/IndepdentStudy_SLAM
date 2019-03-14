@@ -110,7 +110,11 @@ ObsTimeGrouper::ObsTimeGrouper(int window_steps, int steps_unit, int start_step,
     this->nt_obs = (window_steps - right_range_steps - start_step)/steps_unit + 1;
     this->last_step = start_step + (this->nt_obs-1) * steps_unit;
     this->obss = new Observations[this->nt_obs];
-    cout<<this->nt_obs<<endl;
+    this->obs_steps = new int[this->nt_obs];
+    this->obs_steps[0] = this->start_step;
+    for(int i=1; i<this->nt_obs; i++){
+        this->obs_steps[i] = this->obs_steps[i-1] + steps_unit;
+    }
 }
 
 void ObsTimeGrouper::group(Observations& allobs){
@@ -144,64 +148,43 @@ void ObsTimeGrouper::group(Observations& allobs){
         }
     }
     nt_obs = igroup;
+    //get n_obs;
+    n_obs = 0;
+    for(int t=0; t<nt_obs; t++){
+        n_obs += obss[t].nobs;
+    }
 }
 
 
+SingleTimeObsOperator::SingleTimeObsOperator(const Observations& obss){
+    this->nx_obs = obss.nobs;
+    this->obs_xidx = new int[nx_obs];
+    for(int i=0; i<nx_obs; i++){
+        obs_xidx[i] = obss.obs[i].ix;
+    }
+}
+
+void SingleTimeObsOperator::setByObservations(const Observations& obss){
+    this->nx_obs = obss.nobs;
+    this->obs_xidx = new int[nx_obs];
+    for(int i=0; i<nx_obs; i++){
+        obs_xidx[i] = obss.obs[i].ix;
+    }
+}
+    
+
 //Burgers_T
-template <class T>
-Burgers_T<T>::Burgers_T(const Burgers& bg): Burgers(bg) {
+template <class T> Burgers_T<T>::Burgers_T(const Burgers& bg): Burgers(bg) {
     curX=new T[nx];
     preX=new T[nx];
     preX2=new T[nx];
 }
 
-Burgers_T<T>::advanceStep() {
-
-
-
-//CostFunctorWb0
-CostFunctorWb0::CostFunctorWb0(int w_size): w_size(w_size) {}
-
-template <typename T> bool CostFunctorWb0::operator()(const T* const w, T* residual) const{
-    for(int i=0; i<this->w_size; i++){
-        residual[i] = w[i];
-    }
+template <class T> T* Burgers_T<T>::getCurrentX(){
+    return curX;
 }
 
-CostFunction* CostFunctorWb0::createAutoDiffCostFunction(int w_size){
-    return new AutoDiffCostFunction<CostFunctorWb0, w_size, w_size>(new CostFunctorWb0(w_size));
-}
-
-
-//CostFunctor_4DVar_FullObs
-CostFunctor_4DVar_FullObs::CostFunctor_4DVar_FullObs(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double *xb0){
-    this->B0 = B0;
-    this->bg = bg;
-    this->obstg = obstg;
-    this->xb0 = xb0;
-    this->bg->getConvenient(&dtdx, &dtdx2, &c0, &c1);
-}
-
-//w: input size, T: n_obs
-template <typename T> bool CostFunctor_4DVar_FullObs::operator()(const T* const w, T* residual) const{
-    T* x0 = new T[this->bg.getNx()];
-    // x0 = xb0 + E*w
-    for(int i=0; i<this->bg.getNx(); i++){
-        x0[i] = xb0[i];
-        for(int j=0; j<B0.n_mode; j++){
-            xb0[i] += w[j] * B0.modes[j][i];
-        }
-    }
-    // M(x0)
-    int istep = 0;
-    int t_last = obstg.last_step;
-    for(int istep=1; istep<=t_last; istep++){
-        if(istep == 1 || bg.getNumericOption() == NUMERIC_OPTION_FORWARD){
-            for(int i=0; i<bg.getNx(); i++){
-
-
-//for constant boundary condition =0 
-void Burgers::advanceStep(){
+template <class T> void Burgers_T<T>::advanceStep() {
     //copy curX -> preX
     istep++; 
     //forward step
@@ -245,7 +228,86 @@ void Burgers::advanceStep(){
             }
         }
     }
-    if(stochastic_option == STOCHASTIC_OPTION_GAUSSIAN){
-        this->addNoiseToCurX();
+    //if(stochastic_option == STOCHASTIC_OPTION_GAUSSIAN){
+    //    this->addNoiseToCurX();
+   // }
+}
+
+
+
+
+
+//CostFunctorWb0
+CostFunctorWb0::CostFunctorWb0(int w_size): w_size(w_size) {}
+
+template <typename T> bool CostFunctorWb0::operator()(const T* const w, T* residual) const{
+    for(int i=0; i<this->w_size; i++){
+        residual[i] = w[i];
     }
 }
+
+CostFunction* CostFunctorWb0::createAutoDiffCostFunction(int w_size){
+    return new AutoDiffCostFunction<CostFunctorWb0, w_size, w_size>(new CostFunctorWb0(w_size));
+}
+
+
+//CostFunctor_4DVar_FullObs
+CostFunctor_4DVar_FullObs::CostFunctor_4DVar_FullObs(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double *xb0){
+    //Covariance
+    this->B0 = B0;
+    //Obs & ObsOperator
+    this->obstg = obstg;
+    int nt_obs = obstg->nt_obs;
+    this->obsop = new SingleTimeObsOperator[nt_obs];
+    for(int i=0; i<nt_obs; i++){
+        this->obsop[i].setByObservations(obstg->obss[i]);
+    }
+    //Model
+    this->bg = bg;
+    this->bg->getConvenient(&dtdx, &dtdx2, &c0, &c1);
+    this->bgt = new Burgers_T(*bg);
+    //background
+    int nx = bg.getNx();
+    this->xb0 = new double[nx];
+    for(int i=0; i<nx; i++){
+        this->xb0[i] = xb0[i];
+    }
+}
+
+//w: input size, residual: n_obs
+template <typename T> bool CostFunctor_4DVar_FullObs::operator()(const T* const w, T* residual) const{
+    T* x0 = new T[this->bg.getNx()];
+    // x0 = xb0 + E*w
+    for(int i=0; i<this->bg.getNx(); i++){
+        x0[i] = xb0[i];
+        for(int j=0; j<B0->n_mode; j++){
+            xb0[i] += w[j] * B0->modes[j][i];
+        }
+    }
+    // M(x0)
+    int last_step = obstg->last_step;
+    int istep=0;
+    int obs_tidx=0;
+    int iobs=0;
+    while(istep<=last_step){
+        if(istep == obstg->obs_steps[obs_tidx]){
+            T* curX = bgt->getCurrentX();
+            SingleTimeObsOperator* st_obsop = obsop[obs_tidx];
+            for(int ix=0; ix<st_obsop->nx_obs; ix++){
+                int x = st_obsop->obs_xidx[ix];
+                residual[iobs++] = curX[x] - obstg->obss[obs_tidx].obs[ix];
+            }
+            obs_tidx++;
+        }
+        bgt->advanceStep();
+        istep = bgt->getIstep();
+    }
+}
+
+CostFunction* CostFunctor_4DVar_FullObs::createAutoDiffCostFunction(covModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0){
+    int w_size = B0->n_mode;
+    int n_obs = obstg->n_obs;
+    return new AutoDiffCostFunction<CostFunctor_4DVar_FullObs, n_obs, w_size>(new CostFunctor_4DVar_FullObs(B0, obstg, bg, xb0));
+}
+
+

@@ -185,7 +185,6 @@ void Burgers::init(double initX[]){
     }
 }
 
-//for constant boundary condition =0 
 void Burgers::advanceStep(){
     //copy curX -> preX
     istep++; 
@@ -359,4 +358,8 @@ void Burgers::outputConfig(const char* config_file){
 
 int Burgers::getNx(){
     return nx;
+}
+
+int Burgers::getIstep(){
+    return istep;
 }

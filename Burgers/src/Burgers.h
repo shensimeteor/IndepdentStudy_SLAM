@@ -61,6 +61,7 @@ public:
     
     void outputConfig(const char* config_file);
     int getNx();
+    int getIstep();
 };
 
 #endif
