@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp
 Burgers.h
-/home/si/Work/IndStudySLAM/Burgers/src/Burgers.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.h
 fstream
 -
 iostream
@@ -20,29 +20,29 @@ stdlib.h
 libconfig.h++
 -
 
-/home/si/Work/IndStudySLAM/Burgers/src/Burgers.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.h
 random
 -
 chrono
 -
 
-/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp
 ceres/ceres.h
-/home/si/Work/IndStudySLAM/Burgers/src/ceres/ceres.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/ceres/ceres.h
 glog/logging.h
-/home/si/Work/IndStudySLAM/Burgers/src/glog/logging.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/glog/logging.h
 stdio.h
 -
 Burgers.h
-/home/si/Work/IndStudySLAM/Burgers/src/Burgers.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.h
 Observation.h
-/home/si/Work/IndStudySLAM/Burgers/src/Observation.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.h
 math.h
-/home/si/Work/IndStudySLAM/Burgers/src/math.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/math.h
 
-/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp
 Observation.h
-/home/si/Work/IndStudySLAM/Burgers/src/Observation.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.h
 fstream
 -
 string
@@ -56,7 +56,7 @@ stdlib.h
 vector
 -
 
-/home/si/Work/IndStudySLAM/Burgers/src/Observation.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

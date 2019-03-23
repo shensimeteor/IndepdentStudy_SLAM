@@ -1,0 +1,15 @@
+{
+    "obs_config_array":
+    [
+    {
+        "obs_x_step": 1,
+        "obs_x_start": 0,
+        "obs_x_end": 999,
+        "obs_t_step": 6,
+        "obs_t_start": 0,
+        "obs_t_end": -1, 
+        "obs_error_mean": 0.0,
+        "obs_error_stdv": 0.05
+    }
+    ]
+}

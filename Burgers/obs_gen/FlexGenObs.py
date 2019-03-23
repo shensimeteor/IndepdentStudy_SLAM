@@ -21,7 +21,7 @@ def add_noise(Xs, obs_ts, obs_xs, obs_error_mean, obs_error_stdv):
 def output_csv(res, outfile):
     with open(outfile, "w") as f:
         writer = csv.writer(f)
-        writer.writerow(["t","x", "truth", "obs", "err_stdv"])
+        writer.writerow(["t","x", "obs", "err_stdv"])
         for tup in res:
             writer.writerow(tup)
     

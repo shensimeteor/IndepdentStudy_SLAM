@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/si/Work/IndStudySLAM/Burgers/build_ceres
+CMAKE_SOURCE_DIR = /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/si/Work/IndStudySLAM/Burgers/build_ceres
+CMAKE_BINARY_DIR = /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles /home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named run_burgers_4dvar.x
+
+# Build rule for target.
+run_burgers_4dvar.x: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_burgers_4dvar.x
+.PHONY : run_burgers_4dvar.x
+
+# fast build rule for target.
+run_burgers_4dvar.x/fast:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/build
+.PHONY : run_burgers_4dvar.x/fast
+
+#=============================================================================
 # Target rules for targets named run_burgers_slam.x
 
 # Build rule for target.
@@ -123,159 +136,173 @@ run_burgers_slam.x/fast:
 	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/build
 .PHONY : run_burgers_slam.x/fast
 
-#=============================================================================
-# Target rules for targets named Ceres_Burgers
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.o: home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o
 
-# Build rule for target.
-Ceres_Burgers: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Ceres_Burgers
-.PHONY : Ceres_Burgers
-
-# fast build rule for target.
-Ceres_Burgers/fast:
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/build
-.PHONY : Ceres_Burgers/fast
-
-home/si/Work/IndStudySLAM/Burgers/src/Burgers.o: home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o
-
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Burgers.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.o
 
 # target to build an object file
-home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o
 
-home/si/Work/IndStudySLAM/Burgers/src/Burgers.i: home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.i: home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Burgers.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.i
 
 # target to preprocess a source file
-home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i
 
-home/si/Work/IndStudySLAM/Burgers/src/Burgers.s: home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.s: home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Burgers.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.s
 
 # target to generate assembly for a file
-home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s
 
-home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.o: home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.o: home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.o
 
 # target to build an object file
-home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o:
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
 
-home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.i: home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.i: home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.i
 
 # target to preprocess a source file
-home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.i:
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.i
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i
 
-home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.s: home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.s: home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.s
 
 # target to generate assembly for a file
-home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.s:
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.s
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s
 
-home/si/Work/IndStudySLAM/Burgers/src/Observation.o: home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.o: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Observation.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.o
 
 # target to build an object file
-home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
 
-home/si/Work/IndStudySLAM/Burgers/src/Observation.i: home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.i: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Observation.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.i
 
 # target to preprocess a source file
-home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
 
-home/si/Work/IndStudySLAM/Burgers/src/Observation.s: home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.s: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Observation.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.s
 
 # target to generate assembly for a file
-home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
 
-home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.o: home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.o: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.o
 
 # target to build an object file
-home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.o:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.o
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o:
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o
 
-home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.i: home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.i: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.i
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.i
 
 # target to preprocess a source file
-home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.i:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.i
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.i:
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.i
 
-home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.s: home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.s: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.s
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.s
 
 # target to generate assembly for a file
-home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.s:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.s
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.s:
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.s
 
-home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.o: home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.o: home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.o
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.o
 
 # target to build an object file
-home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.o:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.o
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.o
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.o:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.o
 
-home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.i: home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.i: home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.i
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.i
 
 # target to preprocess a source file
-home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.i:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.i
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.i
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.i:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.i
 
-home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.s: home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.s: home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.s
 
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.s
 
 # target to generate assembly for a file
-home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.s:
-	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.s
-.PHONY : home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.cpp.s
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.s:
+	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.cpp.s
+
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.o: home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.o
+
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.o
+
+# target to build an object file
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.o:
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.o
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.o
+
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.i: home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.i
+
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.i
+
+# target to preprocess a source file
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.i:
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.i
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.i
+
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.s: home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.s
+
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.s
+
+# target to generate assembly for a file
+home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.s:
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.s
+.PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.s
 
 # Help Target
 help:
@@ -284,24 +311,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... run_burgers_4dvar.x"
 	@echo "... edit_cache"
 	@echo "... run_burgers_slam.x"
-	@echo "... Ceres_Burgers"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Burgers.o"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Burgers.i"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Burgers.s"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.o"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.i"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.s"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Observation.o"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Observation.i"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/Observation.s"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.o"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.i"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/burgers_slam.s"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.o"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.i"
-	@echo "... home/si/Work/IndStudySLAM/Burgers/src/run_burgers_slam.s"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.o"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.i"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.s"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.o"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.i"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.s"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.o"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.i"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.s"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.o"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.i"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.s"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.o"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.i"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_4dvar.s"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.o"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.i"
+	@echo "... home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.s"
 .PHONY : help
 
 

@@ -1,2 +1,5 @@
 setting1: 
     use perturbed model as truth, 200 steps spin up
+setting2:
+    use real model as truth, but an offset step to create initial error
+    (truth: 180-268.bin, background:200-288.bin)

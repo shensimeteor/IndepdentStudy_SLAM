@@ -1,11 +1,10 @@
 
-ALL: test.x test_obs.x run_burgers.x
+ALL: test.x test_obs.x run_burgers.x 
 
 FCFLAGS=-g -std=c++11 
 LDFLAGS=-L/usr/local/lib -lconfig++
 
-#Ceres_Burgers.x: Burgers.o Ceres_Burgers.o Observation.o
-#	g++ $^ $(LDFLAGS) -o $@
+
 
 test.x: test.o Burgers.o
 	g++ $^ $(LDFLAGS) -o $@

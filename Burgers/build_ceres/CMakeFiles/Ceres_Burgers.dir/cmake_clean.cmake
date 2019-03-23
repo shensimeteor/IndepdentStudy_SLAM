@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o"
-  "CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o"
-  "CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o"
+  "CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o"
+  "CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o"
+  "CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o"
   "Ceres_Burgers.pdb"
   "Ceres_Burgers"
 )

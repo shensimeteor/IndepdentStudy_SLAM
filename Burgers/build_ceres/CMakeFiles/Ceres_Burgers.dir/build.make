@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/si/Work/IndStudySLAM/Burgers/build_ceres
+CMAKE_SOURCE_DIR = /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/si/Work/IndStudySLAM/Burgers/build_ceres
+CMAKE_BINARY_DIR = /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Ceres_Burgers.dir/depend.make
@@ -57,90 +57,90 @@ include CMakeFiles/Ceres_Burgers.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Ceres_Burgers.dir/flags.make
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o: CMakeFiles/Ceres_Burgers.dir/flags.make
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o: /home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o -c /home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o: CMakeFiles/Ceres_Burgers.dir/flags.make
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o: /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp > CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.i
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp > CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.i
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.s
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.s
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.requires:
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.requires
+.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.requires
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.provides: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.provides.build
-.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.provides
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.provides: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.provides.build
+.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.provides
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.provides.build: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o
-
-
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o: CMakeFiles/Ceres_Burgers.dir/flags.make
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o: /home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o -c /home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp
-
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp > CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.i
-
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.s
-
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.requires:
-
-.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.requires
-
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.provides: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.provides.build
-.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.provides
-
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.provides.build: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.provides.build: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o
 
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o: CMakeFiles/Ceres_Burgers.dir/flags.make
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o: /home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o -c /home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o: CMakeFiles/Ceres_Burgers.dir/flags.make
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o: /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp > CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.i
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp > CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.i
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.s
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.s
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.requires:
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.requires
+.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.requires
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.provides: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.provides.build
-.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.provides
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.provides: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.provides.build
+.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.provides
 
-CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.provides.build: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.provides.build: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o
+
+
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o: CMakeFiles/Ceres_Burgers.dir/flags.make
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o: /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp
+
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp > CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.i
+
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp -o CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.s
+
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.requires:
+
+.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.requires
+
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.provides: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ceres_Burgers.dir/build.make CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.provides.build
+.PHONY : CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.provides
+
+CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.provides.build: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
 
 
 # Object files for target Ceres_Burgers
 Ceres_Burgers_OBJECTS = \
-"CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o" \
-"CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o" \
-"CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o"
+"CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o" \
+"CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o" \
+"CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o"
 
 # External object files for target Ceres_Burgers
 Ceres_Burgers_EXTERNAL_OBJECTS =
 
-Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o
-Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o
-Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o
+Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o
+Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o
+Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
 Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/build.make
 Ceres_Burgers: /usr/local/lib/libceres.a
 Ceres_Burgers: /usr/local/lib/libconfig++.so
@@ -165,7 +165,7 @@ Ceres_Burgers: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
 Ceres_Burgers: /usr/lib/x86_64-linux-gnu/librt.so
 Ceres_Burgers: /usr/lib/x86_64-linux-gnu/libcxsparse.so
 Ceres_Burgers: CMakeFiles/Ceres_Burgers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Ceres_Burgers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Ceres_Burgers"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ceres_Burgers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -173,9 +173,9 @@ CMakeFiles/Ceres_Burgers.dir/build: Ceres_Burgers
 
 .PHONY : CMakeFiles/Ceres_Burgers.dir/build
 
-CMakeFiles/Ceres_Burgers.dir/requires: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Ceres_Burgers.cpp.o.requires
-CMakeFiles/Ceres_Burgers.dir/requires: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Burgers.cpp.o.requires
-CMakeFiles/Ceres_Burgers.dir/requires: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndStudySLAM/Burgers/src/Observation.cpp.o.requires
+CMakeFiles/Ceres_Burgers.dir/requires: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Ceres_Burgers.cpp.o.requires
+CMakeFiles/Ceres_Burgers.dir/requires: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.requires
+CMakeFiles/Ceres_Burgers.dir/requires: CMakeFiles/Ceres_Burgers.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.requires
 
 .PHONY : CMakeFiles/Ceres_Burgers.dir/requires
 
@@ -184,6 +184,6 @@ CMakeFiles/Ceres_Burgers.dir/clean:
 .PHONY : CMakeFiles/Ceres_Burgers.dir/clean
 
 CMakeFiles/Ceres_Burgers.dir/depend:
-	cd /home/si/Work/IndStudySLAM/Burgers/build_ceres && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/si/Work/IndStudySLAM/Burgers/build_ceres /home/si/Work/IndStudySLAM/Burgers/build_ceres /home/si/Work/IndStudySLAM/Burgers/build_ceres /home/si/Work/IndStudySLAM/Burgers/build_ceres /home/si/Work/IndStudySLAM/Burgers/build_ceres/CMakeFiles/Ceres_Burgers.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/Ceres_Burgers.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Ceres_Burgers.dir/depend
 

@@ -1,5 +1,6 @@
 #include "ceres/ceres.h"
 #include "glog/logging.h"
+#include "ceres/dynamic_autodiff_cost_function.h"
 #include <stdio.h>
 #include "Burgers.h"
 #include "Observation.h"
@@ -9,7 +10,9 @@
 #include "burgers_4dvar.h"
 #include <iostream>
 
+using ceres::Jet;
 using ceres::AutoDiffCostFunction;
+using ceres::DynamicAutoDiffCostFunction;
 using ceres::CostFunction;
 using ceres::Problem;
 using ceres::Solver;
@@ -35,12 +38,13 @@ Burgers_4DVar::Burgers_4DVar(const char* config_file, const char* config_path){
         if(varda.exists("B0_inflate_factor"))
             this->B0_inflate_factor = varda["B0_inflate_factor"];
         if(varda.exists("Qt_inflate_factor"))
-            this->Qstart_inflate_factor = varda["Qt_inflate_factor"];
+            this->Qt_inflate_factor = varda["Qt_inflate_factor"];
         if(varda.exists("max_num_iterations"))
             this->max_num_iterations = varda["max_num_iterations"];
         varda.lookupValue("xb0_file", this->xb0_file);
         varda.lookupValue("obs_file", this->obs_file);
         varda.lookupValue("xas_file", this->xas_file);
+        varda.lookupValue("cov_dir", this->cov_dir);
     }catch(ParseException &pex){
         cerr << "Parse error at " << pex.getFile() << ":" << pex.getLine()
                       << " - " << pex.getError() << endl;
@@ -56,6 +60,7 @@ Burgers_4DVar::Burgers_4DVar(const char* config_file, const char* config_path){
 
 CovModel* Burgers_4DVar::readB0(int nx){
     string B0file = this->cov_dir + string("/B0_modes.bin");
+    cout<<"B0file: "<<B0file<<endl;
     CovModel* pcov = new CovModel(B0file.c_str(), nx);
     return pcov;
 }
@@ -72,7 +77,7 @@ CovModel* Burgers_4DVar::inflate(CovModel* B0, double inflator){
     double sqrt_inflator= sqrt(inflator);
     for(int i=0; i<B0->n_mode; i++){
         for(int j=0; j<B0->nx; j++){
-            B0[i][j] *= sqrt_inflator;
+            B0->modes[i][j] *= sqrt_inflator;
         }
     }
     return B0;
@@ -100,6 +105,16 @@ CovModel::CovModel(const char* cov_mode_file, int nx){
     }
 }
 
+// xb0 <- xb0 + Modes*w
+void CovModel::updateXb0byW(double* w, double* xb0){
+    int nw = this->n_mode;
+    for(int i=0; i<nx; i++){
+        for(int j=0; j<nw; j++){
+            xb0[i]+= w[j] * modes[j][i];
+        }
+    }
+}
+       
 
 ObsTimeGrouper::ObsTimeGrouper(int window_steps, int steps_unit, int start_step, int left_range_steps, int right_range_steps){
     this->window_steps = window_steps;
@@ -122,12 +137,12 @@ void ObsTimeGrouper::group(Observations& allobs){
     int istep=start_step;
     int i=0;
     bool flag=false;
-    cout<<allobs.nobs<<endl;
+    //cout<<allobs.nobs<<endl;
     while(i<=allobs.nobs){
         if(i==allobs.nobs){
             if(flag){
                 end_idx = i-1;
-                cout<<start_idx<<" "<<end_idx<<" "<<igroup<<endl;
+               // cout<<start_idx<<" "<<end_idx<<" "<<igroup<<endl;
                 obss[igroup++].setByCopy(end_idx-start_idx+1, &allobs.obs[start_idx]);
             }
             i++;
@@ -137,7 +152,7 @@ void ObsTimeGrouper::group(Observations& allobs){
             i++;
         }else if( allobs.obs[i].it > istep + right_range_steps && flag){
             end_idx = i-1;
-            cout<<start_idx<<" "<<end_idx<<" "<<igroup<<endl;
+            //cout<<start_idx<<" "<<end_idx<<" "<<igroup<<endl;
             obss[igroup++].setByCopy(end_idx-start_idx+1, &allobs.obs[start_idx]);
             if(igroup==nt_obs) break;
             istep+= steps_unit; 
@@ -180,6 +195,12 @@ template <class T> Burgers_T<T>::Burgers_T(const Burgers& bg): Burgers(bg) {
     preX2=new T[nx];
 }
 
+template<class T> void Burgers_T<T>::init(T* initX){
+    istep=0;
+    for(int i=0; i<nx; i++){
+        curX[i] = initX[i];
+    }
+}
 template <class T> T* Burgers_T<T>::getCurrentX(){
     return curX;
 }
@@ -193,18 +214,18 @@ template <class T> void Burgers_T<T>::advanceStep() {
             preX[i] = curX[i];
         }
         if(bc_option == BC_OPTION_FIXED){
-            curX[0] = bc_value;
-            curX[nx-1] = bc_value;
+            curX[0] = (T) bc_value;
+            curX[nx-1] = (T) bc_value;
             for(int i=1; i<nx-1; i++){
-                double velo = linear_option==LINEAR_OPTION_LINEAR? linear_velocity : preX[i];
-                curX[i] = preX[i] - 0.5*dtdx*velo*(preX[i+1] - preX[i-1]) + 0.5*c1*(preX[i+1]+preX[i-1] - 2*preX[i]);
+                T velo = linear_option==LINEAR_OPTION_LINEAR? (T)linear_velocity : preX[i];
+                curX[i] = preX[i] - 0.5*dtdx*velo*(preX[i+1] - preX[i-1]) + 0.5*c1*(preX[i+1]+preX[i-1] - 2.0*preX[i]);
             }
         }else if(bc_option == BC_OPTION_PERIOD){
             for(int i=0; i<nx; i++){
                 int im1 = (i-1+nx) % nx;
                 int ip1 = (i+1) %nx;
-                double velo = linear_option==LINEAR_OPTION_LINEAR? linear_velocity : preX[i];
-                curX[i] = preX[i] - 0.5*dtdx*velo*(preX[ip1] - preX[im1]) + 0.5*c1*(preX[ip1]+preX[im1] - 2*preX[i]);
+                T velo = linear_option==LINEAR_OPTION_LINEAR? (T)linear_velocity : preX[i];
+                curX[i] = preX[i] - 0.5*dtdx*velo*(preX[ip1] - preX[im1]) + 0.5*c1*(preX[ip1]+preX[im1] - 2.0*preX[i]);
             }
         }
     }else{ //frog leap 
@@ -213,17 +234,17 @@ template <class T> void Burgers_T<T>::advanceStep() {
             preX[i] = curX[i];
         }
         if(bc_option == BC_OPTION_FIXED){
-            curX[0] = bc_value;
-            curX[nx-1] = bc_value;
+            curX[0] = (T) bc_value;
+            curX[nx-1] = (T) bc_value;
             for(int i=1; i<nx-1; i++){
-                double velo = linear_option==LINEAR_OPTION_LINEAR? linear_velocity : preX[i];
+                T velo = linear_option==LINEAR_OPTION_LINEAR? (T)linear_velocity : preX[i];
                 curX[i] = c0*(preX2[i] + c1*(preX[i+1] + preX[i-1] - preX2[i]) - dtdx*(velo*(preX[i+1] - preX[i-1])));
             }
         }else if(bc_option == BC_OPTION_PERIOD){
             for(int i=0; i<nx; i++){
                 int im1 = (i-1+nx) % nx;
                 int ip1 = (i+1) %nx;
-                double velo = linear_option==LINEAR_OPTION_LINEAR? linear_velocity : preX[i];
+                T velo = linear_option==LINEAR_OPTION_LINEAR? (T)linear_velocity : preX[i];
                 curX[i] = c0*(preX2[i] + c1*(preX[ip1] + preX[im1] - preX2[i]) - dtdx*(velo*(preX[ip1] - preX[im1])));
             }
         }
@@ -240,14 +261,20 @@ template <class T> void Burgers_T<T>::advanceStep() {
 //CostFunctorWb0
 CostFunctorWb0::CostFunctorWb0(int w_size): w_size(w_size) {}
 
-template <typename T> bool CostFunctorWb0::operator()(const T* const w, T* residual) const{
+template <typename T> bool CostFunctorWb0::operator()(T const* const* ptr_w, T* residual) const{
     for(int i=0; i<this->w_size; i++){
-        residual[i] = w[i];
+        residual[i] = (*ptr_w)[i];
     }
+    return true;
 }
 
-CostFunction* CostFunctorWb0::createAutoDiffCostFunction(int w_size){
-    return new AutoDiffCostFunction<CostFunctorWb0, w_size, w_size>(new CostFunctorWb0(w_size));
+CostFunction* CostFunctorWb0::createDynamicAutoDiffCostFunction(int w_size){
+    CostFunctorWb0* functor = new CostFunctorWb0(w_size);
+    DynamicAutoDiffCostFunction<CostFunctorWb0, 4>* cost_function = new 
+        DynamicAutoDiffCostFunction<CostFunctorWb0, 4>(functor);
+    cost_function->AddParameterBlock(w_size);
+    cost_function->SetNumResiduals(w_size);
+    return cost_function;
 }
 
 
@@ -264,10 +291,8 @@ CostFunctor_4DVar_FullObs::CostFunctor_4DVar_FullObs(CovModel* B0, ObsTimeGroupe
     }
     //Model
     this->bg = bg;
-    this->bg->getConvenient(&dtdx, &dtdx2, &c0, &c1);
-    this->bgt = new Burgers_T(*bg);
     //background
-    int nx = bg.getNx();
+    int nx = bg->getNx();
     this->xb0 = new double[nx];
     for(int i=0; i<nx; i++){
         this->xb0[i] = xb0[i];
@@ -275,39 +300,52 @@ CostFunctor_4DVar_FullObs::CostFunctor_4DVar_FullObs(CovModel* B0, ObsTimeGroupe
 }
 
 //w: input size, residual: n_obs
-template <typename T> bool CostFunctor_4DVar_FullObs::operator()(const T* const w, T* residual) const{
-    T* x0 = new T[this->bg.getNx()];
+//template <typename T> bool CostFunctor_4DVar_FullObs::operator()(const T* const w, T* residual) const{
+template <typename T> bool CostFunctor_4DVar_FullObs::operator()(T const* const* ptr_w, T* residual) const{
+    Burgers_T<T>* bgt = new Burgers_T<T>(*bg);
+    T* x0 = new T[this->bg->getNx()];
     // x0 = xb0 + E*w
-    for(int i=0; i<this->bg.getNx(); i++){
-        x0[i] = xb0[i];
+    for(int i=0; i<this->bg->getNx(); i++){
+        T sum=(T)0.0;
         for(int j=0; j<B0->n_mode; j++){
-            xb0[i] += w[j] * B0->modes[j][i];
+            sum = sum + (*ptr_w)[j] * B0->modes[j][i];
         }
+        x0[i] = (T) (xb0[i]) + sum;
+
     }
     // M(x0)
     int last_step = obstg->last_step;
     int istep=0;
     int obs_tidx=0;
     int iobs=0;
+    bgt->init(x0);
     while(istep<=last_step){
+    //    cout<<"istep="<<istep<<endl;
         if(istep == obstg->obs_steps[obs_tidx]){
             T* curX = bgt->getCurrentX();
-            SingleTimeObsOperator* st_obsop = obsop[obs_tidx];
-            for(int ix=0; ix<st_obsop->nx_obs; ix++){
-                int x = st_obsop->obs_xidx[ix];
-                residual[iobs++] = curX[x] - obstg->obss[obs_tidx].obs[ix];
+            SingleTimeObsOperator& st_obsop = obsop[obs_tidx];
+            for(int ix=0; ix<st_obsop.nx_obs; ix++){
+                int x = st_obsop.obs_xidx[ix];
+      //          cout<<"ix="<<ix<<", x="<<x<<"iobs="<<iobs<<endl;
+                residual[iobs++] = (curX[x] - obstg->obss[obs_tidx].obs[ix].value) / sqrt(obstg->obss[obs_tidx].obs[ix].error);
             }
             obs_tidx++;
         }
         bgt->advanceStep();
         istep = bgt->getIstep();
     }
+   // cout<<"run finish"<<endl;
+    return true;
 }
 
-CostFunction* CostFunctor_4DVar_FullObs::createAutoDiffCostFunction(covModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0){
+CostFunction* CostFunctor_4DVar_FullObs::createDynamicAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0){
     int w_size = B0->n_mode;
     int n_obs = obstg->n_obs;
-    return new AutoDiffCostFunction<CostFunctor_4DVar_FullObs, n_obs, w_size>(new CostFunctor_4DVar_FullObs(B0, obstg, bg, xb0));
+    CostFunctor_4DVar_FullObs* functor = new CostFunctor_4DVar_FullObs(B0, obstg, bg, xb0);
+    DynamicAutoDiffCostFunction<CostFunctor_4DVar_FullObs, 4>* cost_function = new 
+        DynamicAutoDiffCostFunction<CostFunctor_4DVar_FullObs, 4>(functor);
+    cost_function->AddParameterBlock(w_size);
+    cost_function->SetNumResiduals(n_obs);
+    return cost_function;
 }
-
 

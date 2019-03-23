@@ -93,7 +93,18 @@ with open(fileconf, "r") as f:
             plt.colorbar()
             plt.savefig(cov_set["out_image_cov_reconstructed"])
             plt.close()
-
+        if(cov_set["singleobs_locations"] and cov_set["out_image_format_singleobs_cov"]):
+            #also from reconstructed cov
+            Cov_rec = E.dot(E.T)
+            for pt in cov_set["singleobs_locations"]:
+                plt.figure()
+                Cov_rec = E.dot(E.T)
+                singleobs_cov = Cov_rec[pt,:]
+                plt.figure()
+                plt.plot(singleobs_cov, 'b-')
+                plt.title("single obs re-constructed covariance, at %d" %pt)
+                plt.savefig(cov_set["out_image_format_singleobs_cov"] %pt)
+                plt.close()
         
 
 

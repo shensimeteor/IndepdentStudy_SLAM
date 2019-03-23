@@ -62,6 +62,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/run_burgers_4dvar.x.dir/DependInfo.cmake"
   "CMakeFiles/run_burgers_slam.x.dir/DependInfo.cmake"
-  "CMakeFiles/Ceres_Burgers.dir/DependInfo.cmake"
   )

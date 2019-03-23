@@ -1,19 +1,19 @@
-//#include "ceres/ceres.h"
-//#include "glog/logging.h"
+#include "ceres/ceres.h"
+#include "glog/logging.h"
 #include <stdio.h>
 #include "Burgers.h"
 #include "Observation.h"
 #include "math.h"
-//#include <libconfig.h++>
+#include <libconfig.h++>
 #include <string>
 
 using namespace std;
-/*using ceres::AutoDiffCostFunction;
+using ceres::AutoDiffCostFunction;
 using ceres::CostFunction;
 using ceres::Problem;
 using ceres::Solver;
 using ceres::ResidualBlockId;
-using ceres::Solve; */
+using ceres::Solve;
 
 
 struct CovModel{
@@ -22,6 +22,7 @@ struct CovModel{
     double ** modes; //[n_mode][nx]
     CovModel() { }
     CovModel(const char* cov_mode_file, int nx); 
+    void updateXb0byW(double* w, double* xb0);
 };
 
 //for config read 
@@ -65,13 +66,13 @@ public:
 
 
 class SingleTimeObsOperator{
-    int nx_obs=-1;
-    int* obs_xidx;
 public:
-    SingleTimeObsOperator() {}
+    int nx_obs;
+    int* obs_xidx;
+    SingleTimeObsOperator() {nx_obs = -1;}
     SingleTimeObsOperator(const Observations& obss); //must make sure, obss only contains same time step, or canbe treated as a single time step (for da)
     void setByObservations(const Observations& obss); 
-}
+};
 
 
 template <class T>
@@ -80,6 +81,7 @@ class Burgers_T: public Burgers{
 public: 
     Burgers_T() {}
     Burgers_T(const Burgers& bg); //copy constructor
+    void init(T* initX); 
     void advanceStep();
     T* getCurrentX();
 };
@@ -88,8 +90,8 @@ public:
 struct CostFunctorWb0 {
     int w_size;
     CostFunctorWb0(int w_size); 
-    template <typename T> bool operator()(const T* const w, T* residual) const;
-    static CostFunction* createAutoDiffCostFunction(int w_size); 
+    template <typename T> bool operator()(T const* const* ptr_w, T* residual) const;
+    static CostFunction* createDynamicAutoDiffCostFunction(int w_size); 
 };
 
 //for strong constraint 4DVar
@@ -98,15 +100,14 @@ struct CostFunctor_4DVar_FullObs{
     CovModel* B0; 
     //Obs & ObsOperator 
     ObsTimeGrouper* obstg; //grouped obs
-    SingleTimeObsOperator* obsop;
-    //Model & its template-T version
+    SingleTimeObsOperator* obsop; //obsop[nt_obs]
+    //Model
     Burgers* bg; 
-    Burgers_T* bgt; 
     //background xb0
     double* xb0;
 
     CostFunctor_4DVar_FullObs(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0); 
-    template <typename T> bool operator()(const T* const w, T* residual) const;
-    static CostFunction* createAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0);
+    template <typename T> bool operator()(T const* const* ptr_w, T* residual) const;
+    static CostFunction* createDynamicAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0);
 }; 
 
