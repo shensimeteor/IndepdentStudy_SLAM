@@ -47,28 +47,48 @@ int main(int argc, char** argv) {
     CovModel* covB0 = bg4dvar.inflate(bg4dvar.readB0(bg.getNx()), bg4dvar.B0_inflate_factor);
     cout<< "[log] Read CovB0" << endl;
     int nw = covB0->n_mode; //dimension of w
-    double* w = new double[nw];
+    double* w0 = new double[nw];
     for(int i=0; i<nw; i++){
-        w[i] = 0.0;
+        w0[i] = 0.0;
     }
 
-    //background term
+    //background term: (w0^T w0)
     CostFunction* cost_function_bckg = CostFunctorWb0::createDynamicAutoDiffCostFunction(nw);
     vector<double*> parameter_blocks;
     parameter_blocks.clear();
-    parameter_blocks.push_back(w);
+    parameter_blocks.push_back(w0);
     problem.AddResidualBlock(cost_function_bckg, NULL, parameter_blocks);
+    cout<< "[log] Added Background Residual Block" << endl;
 
+    CovModel* ptr_qts=NULL;
+    if(bg4dvar.weak_constraint){
+        int nt_Qts=0;
+        ptr_qts = bg4dvar.check_read_inflate_allQts(&obstg, bg.getNx(), nt_Qts);
+        //add model error terms:
+        for(int i=0; i<nt_Qts; i++){
+            int nw = ptr_qts[i].n_mode;
+            double *wt = new double[nw];
+            for(int i=0; i<nw; i++){
+                wt[i]=0.0;
+            }
+            CostFunction* cost_function_wt = CostFunctorWb0::createDynamicAutoDiffCostFunction(nw);
+            vector<double*> single_time_parameter_blocks;
+            single_time_parameter_blocks.clear();
+            single_time_parameter_blocks.push_back(wt);
+            problem.AddResidualBlock(cost_function_wt, NULL, single_time_parameter_blocks);
+            parameter_blocks.push_back(wt);
 
-    //if(!bg4dvar.weak_constraint){
-        //DynamicAutoDiffCostFunction<CostFunctorWb0, 4>* cost_function_bckg = 
-        //    new DynamicAutoDiffCostFunction<CostFunctorWb0, 4>(new CostFunctorWb0(nw));
-        //CostFunction* cost_function_bckg = CostFunctorWb0::createAutoDiffCostFunction(nw);
-        //cost_function_bckg->AddParameterBlock(nw);
-        //cost_function_bckg->SetNumResiduals(nw);
+        }
+        cout<< "[log] Added Model Error Residual Block" << endl;
+        //observation term
+        CostFunction* cost_function_obs = CostFunctor_Weak4DVar_FullObs::createDynamicAutoDiffCostFunction(covB0, &obstg, &bg, xb0[0], ptr_qts); 
+        problem.AddResidualBlock(cost_function_obs, NULL, parameter_blocks);
+        cout<< "[log] Added Observation Residual Block, parameter_blocks size=" << parameter_blocks.size() << endl;
+    }else{
         CostFunction* cost_function_obs = CostFunctor_4DVar_FullObs::createDynamicAutoDiffCostFunction(covB0, &obstg, &bg, xb0[0]);
         problem.AddResidualBlock(cost_function_obs, NULL, parameter_blocks);
-//    }
+        cout<< "[log] Added Observation Residual Block" << endl;
+    }
 
     cout<< "[log] Problem Defined" << endl; 
     // Run the solver!
@@ -84,9 +104,54 @@ int main(int argc, char** argv) {
     cout<< "[log] Finish Optimization and get W" << endl;
 
     //postprocess: w->xa, M(xa) -> xas
-    covB0->updateXb0byW(w, xb0[0]);
-    bg.init(xb0[0]);
-    bg.advanceNStepsAndOutputBin(bg4dvar.window_steps, bg4dvar.xas_file.c_str(),1,1);
+    if(bg4dvar.weak_constraint){
+        double** xs = new double*[bg4dvar.window_steps+1];
+        for(int i=0; i<=bg4dvar.window_steps; i++){
+            xs[i] = new double[bg.getNx()];
+        }
+        covB0->updateXb0byW(w0, xb0[0]);
+        for(int i=0; i<bg.getNx(); i++){
+            xs[0][i] = xb0[0][i];
+        }
+        int nt_Qts = parameter_blocks.size()-1;
+        int offset=0;
+        if(obstg.start_step == 0)
+            offset = 1;
+        int curr_step=0;
+        for(int irun = 0; irun < nt_Qts; irun++){
+            int n_step = obstg.obs_steps[offset + irun] - curr_step;
+            bg.init(xs[curr_step]);
+            while(bg.getIstep() < n_step){
+                bg.advanceStep();
+                curr_step++;
+                double* curX = bg.getCurrentX();
+                for(int i=0; i<bg.getNx(); i++){
+                    xs[curr_step][i] = curX[i];
+                }
+            }
+            //
+            double* wt = parameter_blocks[irun+1];
+            CovModel* Qt = &ptr_qts[irun];
+            Qt->updateXb0byW(wt, xs[curr_step]); 
+        }
+        if(curr_step<bg4dvar.window_steps){
+            int n_step = bg4dvar.window_steps - curr_step;
+            bg.init(xs[curr_step]);
+            while(bg.getIstep() < n_step){
+                bg.advanceStep();
+                curr_step++;
+                double* curX = bg.getCurrentX();
+                for(int i=0; i<bg.getNx(); i++){
+                    xs[curr_step][i] = curX[i];
+                }
+            }
+        }
+        bg.writeXs(bg4dvar.xas_file.c_str(), xs, bg4dvar.window_steps, bg.getNx());
+    }else{
+        covB0->updateXb0byW(w0, xb0[0]);
+        bg.init(xb0[0]);
+        bg.advanceNStepsAndOutputBin(bg4dvar.window_steps, bg4dvar.xas_file.c_str(),1,1);
+    }
     cout<< "[log] Finish Re-run model and output xas" <<endl;
     return 0;
 }

@@ -182,6 +182,8 @@ void Burgers::init(double initX[]){
     istep=0;
     for(int i=0; i<nx; i++){
         curX[i] = initX[i];
+        preX[i] = 0.0;
+        preX2[i] = 0.0;
     }
 }
 
@@ -362,4 +364,8 @@ int Burgers::getNx(){
 
 int Burgers::getIstep(){
     return istep;
+}
+
+double* Burgers::getCurrentX(){
+    return curX;
 }

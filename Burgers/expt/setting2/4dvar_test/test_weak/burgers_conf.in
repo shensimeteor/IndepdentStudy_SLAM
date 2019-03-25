@@ -59,13 +59,13 @@ da_experiment_cost_groups = {
 da_4dvar_experiment = {
    window_steps = 288; //whole window contains 288 model integration steps
    da_steps_unit = 6; //every 6 model integration steps will be consider as a da step, i.e. Q/obs will be ready for each da step
-   weak_constraint = false; //strong or weak constraint
+   weak_constraint = true; //strong or weak constraint
    xb0_file = "xb0.bin";
    obs_file = "obs.csv";
    xas_file = "xas.bin";
    cov_dir = "cov"; //inside dir, will have B0_modes.bin, Q<t>_modes.bin, t=1,...,n_da_step
    B0_inflate_factor = 0.06;
-   Qt_inflate_factor = 1.0; 
+   Qt_inflate_factor = 0.01; 
    max_num_iterations = 10;
 }
 

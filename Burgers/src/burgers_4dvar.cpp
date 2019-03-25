@@ -60,7 +60,6 @@ Burgers_4DVar::Burgers_4DVar(const char* config_file, const char* config_path){
 
 CovModel* Burgers_4DVar::readB0(int nx){
     string B0file = this->cov_dir + string("/B0_modes.bin");
-    cout<<"B0file: "<<B0file<<endl;
     CovModel* pcov = new CovModel(B0file.c_str(), nx);
     return pcov;
 }
@@ -83,26 +82,71 @@ CovModel* Burgers_4DVar::inflate(CovModel* B0, double inflator){
     return B0;
 }
 
+CovModel* Burgers_4DVar::check_read_inflate_allQts(ObsTimeGrouper* obstg, int nx, int& nt_Qts){
+    //get nt_Qts from obstg
+    nt_Qts=0;
+    if(obstg->start_step == 0){
+        nt_Qts = obstg->nt_obs - 1;
+    }else{
+        nt_Qts = obstg->nt_obs;
+    }
+    CovModel* ptr_qts = new CovModel[nt_Qts];
+    //read & inflate Qts files
+    for(int i=0; i<nt_Qts; i++){
+        int qt_tidx;
+        if(obstg->start_step == 0){
+            qt_tidx = obstg->obs_steps[i+1];
+        }else{
+            qt_tidx = obstg->obs_steps[i];
+        }
+        char buffer[20];
+        sprintf(buffer, "/Q%03d_modes.bin", qt_tidx);
+        string Qtfile = this->cov_dir + string(buffer);
+        ptr_qts[i].load(Qtfile.c_str(), nx);
+    }
+    return ptr_qts;    
+}
 
 
-//cov_mode_file, matrix of [nx][n_mode]
-CovModel::CovModel(const char* cov_mode_file, int nx){
+void CovModel::load(const char* cov_mode_file, int nx){
     std::ifstream f(cov_mode_file, std::ios::in | std::ios::binary);
     if(!f){
-        printf("file not found!\n");
+        printf("file not found -- %s!\n", cov_mode_file);
         exit(1);
     }else{
+        /*
         this->nx = nx;
         f.seekg(0, f.end);
         int length = f.tellg();
         f.seekg(0, f.beg);
         this->n_mode = (length/(8*nx));
         this->modes = new double*[n_mode];
+        printf("Cov Modes number = %d\n", this->n_mode);
         for(int i=0; i<n_mode; i++){
             this->modes[i]=new double[nx];
             f.read((char*)modes[i], nx*sizeof(double));
         }
+        f.close(); */
+        this->nx = nx;
+        f.seekg(0, f.beg);
+        vector<double*> vec; 
+        while(f.peek()!=EOF){
+            double* x = new double[nx];
+            f.read((char*)x, nx*sizeof(double));
+            vec.push_back(x);
+        }
+        printf("vector_size = %d\n", vec.size());
+        this->n_mode = vec.size();
+        this->modes = new double*[n_mode];
+        for(int i=0; i<this->n_mode; i++){
+            this->modes[i] = vec[i];
+        }
     }
+}
+
+//cov_mode_file, matrix of [nx][n_mode]
+CovModel::CovModel(const char* cov_mode_file, int nx){
+    this->load(cov_mode_file, nx);
 }
 
 // xb0 <- xb0 + Modes*w
@@ -199,6 +243,9 @@ template<class T> void Burgers_T<T>::init(T* initX){
     istep=0;
     for(int i=0; i<nx; i++){
         curX[i] = initX[i];
+        preX[i] = (T) 0.;
+        preX2[i] = (T) 0.;
+
     }
 }
 template <class T> T* Burgers_T<T>::getCurrentX(){
@@ -334,7 +381,7 @@ template <typename T> bool CostFunctor_4DVar_FullObs::operator()(T const* const*
         bgt->advanceStep();
         istep = bgt->getIstep();
     }
-   // cout<<"run finish"<<endl;
+    cout<<"run finish"<<endl;
     return true;
 }
 
@@ -348,4 +395,109 @@ CostFunction* CostFunctor_4DVar_FullObs::createDynamicAutoDiffCostFunction(CovMo
     cost_function->SetNumResiduals(n_obs);
     return cost_function;
 }
+
+
+// WeakConstraint 4DVar
+CostFunctor_Weak4DVar_FullObs::CostFunctor_Weak4DVar_FullObs(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double *xb0, CovModel* Qts) :
+    CostFunctor_4DVar_FullObs(B0, obstg, bg, xb0){
+        this->Qts = Qts;
+        if(obstg->start_step == 0){
+            this->nt_Qts = obstg->nt_obs-1;
+        }else{
+            this->nt_Qts = obstg->nt_obs;
+        }
+}
+
+template <typename T> bool CostFunctor_Weak4DVar_FullObs::operator()(T const* const* ws, T* residual) const{
+    Burgers_T<T>* bgt = new Burgers_T<T>(*bg);
+    T* x0 = new T[this->bg->getNx()];
+    // x0 = xb0 + E0*w0
+    for(int i=0; i<this->bg->getNx(); i++){
+        T sum=(T)0.0;
+        for(int j=0; j<B0->n_mode; j++){
+            sum = sum + ws[0][j] * B0->modes[j][i];
+        }
+        x0[i] = (T) (xb0[i]) + sum;
+
+    }
+    int obs_tidx=0;
+    int iobs=0;
+    //if 0th step has obs
+    if(obstg->obs_steps[0] == 0){
+        SingleTimeObsOperator& st_obsop = obsop[0];
+        for(int ix=0; ix<st_obsop.nx_obs; ix++){
+            int x = st_obsop.obs_xidx[ix];
+            residual[iobs++] = (x0[x] - obstg->obss[0].obs[ix].value) / sqrt(obstg->obss[0].obs[ix].error);
+        }
+        obs_tidx++;
+    }
+    //
+    int curr_step=0;
+    for(int irun = 0; irun< nt_Qts; irun++ ){
+        int nsteps = obstg->obs_steps[obs_tidx] - curr_step;  //steps to integrate
+        // x(t) = M(x(t-1)) , in curX
+        bgt->init(x0);
+        while(bgt->getIstep() < nsteps){
+            bgt->advanceStep();
+        }
+        T* curX = bgt->getCurrentX();
+        // curX += Et*wt
+        for(int i=0; i<bgt->getNx(); i++){
+            T sum=(T)0.0;
+            for(int j=0; j<Qts[irun].n_mode; j++){
+                sum = sum + ws[irun+1][j] * Qts[irun].modes[j][i];
+            }
+            curX[i] = curX[i] + sum;
+        } 
+        // residual = H(curX) - obs
+        SingleTimeObsOperator& st_obsop = obsop[obs_tidx];
+        for(int ix=0; ix<st_obsop.nx_obs; ix++){
+            int x = st_obsop.obs_xidx[ix];
+            residual[iobs++] = (curX[x] - obstg->obss[obs_tidx].obs[ix].value) / sqrt(obstg->obss[obs_tidx].obs[ix].error);
+        }
+        // copy curX to x0
+        for(int i=0; i<bgt->getNx(); i++){
+            x0[i] = curX[i];
+        }
+        // update obs_tidx, curr_step
+        curr_step = obstg->obs_steps[obs_tidx];
+        obs_tidx++;
+    }
+    //evaluate
+    T rmse_diff_obs=(T)0.0;
+    for(int i=0; i<iobs; i++){
+        rmse_diff_obs +=  residual[i]*residual[i];
+    }
+    T t_iobs = (T) (iobs*1.0);
+    rmse_diff_obs = sqrt(rmse_diff_obs/t_iobs);
+    cout<<"iobs="<<iobs<<", rms_residual = "<<rmse_diff_obs<<endl;
+    //for(int i=0; i<iobs; i++){
+    //    cout<<"i="<<i<<", residual="<<residual[i]<<endl;
+   // }
+//    cout<<"curr_step="<<curr_step<<",  obs_tidx="<<obs_tidx<<endl;
+    return true;
+}
+
+
+CostFunction* CostFunctor_Weak4DVar_FullObs::createDynamicAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0, CovModel* Qts){
+    int w_size = B0->n_mode;
+    int n_obs = obstg->n_obs;
+    CostFunctor_Weak4DVar_FullObs* functor = new CostFunctor_Weak4DVar_FullObs(B0, obstg, bg, xb0, Qts);
+    DynamicAutoDiffCostFunction<CostFunctor_Weak4DVar_FullObs, 4>* cost_function = new 
+        DynamicAutoDiffCostFunction<CostFunctor_Weak4DVar_FullObs, 4>(functor);
+    //parameter: w0
+    cost_function->AddParameterBlock(B0->n_mode);
+//    cout<<B0->n_mode<<endl;
+    //parameter: wt (Qt): t=1,..,nt_Qts
+    for(int i=0; i<functor->nt_Qts; i++){ 
+  //      cout<<Qts[i].n_mode<<endl;
+        cost_function->AddParameterBlock(Qts[i].n_mode);
+    }
+    //residual: n_obs
+    cost_function->SetNumResiduals(n_obs);
+    return cost_function;
+}
+
+
+
 

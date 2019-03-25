@@ -5,6 +5,7 @@
 #include "Observation.h"
 #include "math.h"
 #include <libconfig.h++>
+#include <vector>
 #include <string>
 
 using namespace std;
@@ -22,8 +23,28 @@ struct CovModel{
     double ** modes; //[n_mode][nx]
     CovModel() { }
     CovModel(const char* cov_mode_file, int nx); 
+    void load(const char* cov_mode_file, int nx); 
     void updateXb0byW(double* w, double* xb0);
 };
+
+
+//to group Observations into multiple Observations objects, based on time
+class ObsTimeGrouper{
+public:
+    int steps_unit=6; //should be same with da_steps_unit, how many steps will be grouped 
+    int start_step=0; //0
+    int left_range_steps=0, right_range_steps=0; 
+    int window_steps=288;
+    int nt_obs; //number of timegroups of obs
+    int last_step; //step of last obs, i.e. the last step needed to be integrated to
+    Observations* obss; //size of group-size, i.e. each member is obs for each grouped-time
+    int* obs_steps;  // same size with obss, obs_steps[idx] = model-step of that idx
+    int n_obs; //total number of obs (~nt*nx)
+    ObsTimeGrouper() {}
+    ObsTimeGrouper(int window_steps, int steps_unit, int start_step=0, int left_range_steps=0, int right_range_steps=0);
+    void group(Observations& allobs);//allobs must already be sorted by time
+};
+
 
 //for config read 
 class Burgers_4DVar {
@@ -44,24 +65,8 @@ public:
     CovModel* readB0(int nx); 
     CovModel* readQt(int nx, int t); //t in range [1,window_steps]
     CovModel* inflate(CovModel* cov, double inflator);
-    
-};
-
-//to group Observations into multiple Observations objects, based on time
-class ObsTimeGrouper{
-public:
-    int steps_unit=6; //should be same with da_steps_unit, how many steps will be grouped 
-    int start_step=0; //0
-    int left_range_steps=0, right_range_steps=0; 
-    int window_steps=288;
-    int nt_obs; //number of timegroups of obs
-    int last_step; //step of last obs, i.e. the last step needed to be integrated to
-    Observations* obss; //size of group-size, i.e. each member is obs for each grouped-time
-    int* obs_steps;  // same size with obss, obs_steps[idx] = model-step of that idx
-    int n_obs; //total number of obs (~nt*nx)
-    ObsTimeGrouper() {}
-    ObsTimeGrouper(int window_steps, int steps_unit, int start_step=0, int left_range_steps=0, int right_range_steps=0);
-    void group(Observations& allobs);//allobs must already be sorted by time
+    CovModel* check_read_inflate_allQts(ObsTimeGrouper* obstg, int nx, int& nt_Qts); 
+    // a high-level API, to check, read, inflate all Qts (return array of Qt, and its size nt_Qts), by time info from obstg
 };
 
 
@@ -87,6 +92,7 @@ public:
 };
 
 
+//for w^T * w pattern residual (used in 4DVar B term and Weak-Constraint 4Dvar's B&Q terms)
 struct CostFunctorWb0 {
     int w_size;
     CostFunctorWb0(int w_size); 
@@ -110,4 +116,14 @@ struct CostFunctor_4DVar_FullObs{
     template <typename T> bool operator()(T const* const* ptr_w, T* residual) const;
     static CostFunction* createDynamicAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0);
 }; 
+
+struct  CostFunctor_Weak4DVar_FullObs: public CostFunctor_4DVar_FullObs{
+    int nt_Qts; //size of Qt array, should be nt_obs-1 
+    CovModel* Qts;
+
+    CostFunctor_Weak4DVar_FullObs(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0, CovModel* Qt);
+    template <typename T> bool operator()(T const* const* ptr_w, T* residual) const;
+    static CostFunction* createDynamicAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0, CovModel* Qt);
+};
+
 

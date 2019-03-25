@@ -2,4 +2,5 @@
 **/*.x
 **/*.bin
 **/*.csv
-**/CMakeFiles
+**/CMakeFiles/**
+**/*.png
