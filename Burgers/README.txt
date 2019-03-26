@@ -9,15 +9,23 @@
  --   Observation.h/cpp: for Observation read
  --   burgers_slam.h/cpp:  classes/structs to run burgers slam
  --   run_burgers_slam.cpp: main code to run burgers slam DA (run_burgers_slam.x executable)
- --   template.conf:  the config file template (for burgers model & slam)
+ --   burgers_4dvar.h/cpp: classes/structs to run burgers 4dvar & weak-constraint 4dvar
+ --   run_burgers_4dvar.cpp: main code to run burgers 4dvar/weak-constraint 4dvar DA (run_burgers_4dvar.x executable)
+ --   template.conf:  the config file template (for burgers model & slam & 4dvar)
  
  - obs_gen/: Python code
  --   FlexGenObs.py: code to generate obs (from model state)
  --   fgobs_conf.json:  obs config file
 
+ - cov_gen/: Python code
+ --   FlexGenCov.py:  code to generate Covariance and its square-root (i.e. Modes) (for 4dvar run) 
+ --   fgcov_conf.json: config file
+
  - scripts/: Python code, some useful tools
  --   ShortSummaryDiff.py: summarize diff (rmse) between 2 model state bin files
  --   ExtractAPeriod.py: extract 1 or more time slice/slices from a bin file
+ --   QuickPlots.py: run inside a 4dvar or slam running directory (after 4dvar or slam finished), to generate "images/" directory
+ --   LinkAllQt.py: link all needed Qt files to a Cov Modes file 
 
  - build/: to build burgers model
  
