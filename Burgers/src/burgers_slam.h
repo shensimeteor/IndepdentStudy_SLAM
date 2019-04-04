@@ -26,7 +26,12 @@ public:
     bool xb0_constraint = false;
     double xb0_err_stdv = 0.05;
     double proc_err_stdv = 0.05;
+    bool xneighbor_constraint = false;
+    bool xneighbor_only_x0 = false;  //only x0 not work well
+    string xneighbor_constraint_xa_dxa = "xa";
+    double xneighbor_diff_stdv = 0.02;
     int max_num_iterations = 10;
+    
 
     Burgers_SLAM() {}
     Burgers_SLAM(const char* config_file, const char* config_path);
@@ -74,6 +79,16 @@ struct CostFunctorX0 {
     static CostFunction* createAutoDiffCostFunction(double init_error_variance, double init_priori);
 };
 
+//x1 - (x0+x2)/2
+struct CostFunctorXneighbor {
+    double neighbor_diff_variance, neighbor_diff_sqrtinv;
+    double xb1, xb0, xb2;
+    CostFunctorXneighbor(double neighbor_diff_variance, double xb0=0.0, double xb1=0.0, double xb2=0.0);
+    template <typename T> bool operator()(const T* const x1, const T* const x0, const T* const x2, T* residual) const;
+    static CostFunction* createAutoDiffCostFunction(double neighbor_diff_variance, double xb0=0.0, double xb1=0.0, double xb2=0.0);
+};
+
+
 struct ResiBlockGroup{
     vector<string> group_name;
     vector<int> start_ids, end_ids;
@@ -92,13 +107,14 @@ struct ResiBlockGroup{
 
     void clear_groups(); //clear the groups
 
-    void add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0); //create automatic groups (by 3 components & 1 whole)
+    void add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0, int cnt_resiblock_xneighbor); //create automatic groups (by 4 components & 1 whole)
 
     void add_groups_proc_subgroup(int cnt_resiblock_proc, int subgroup_size, int offset=0); //create automatic groups (for proc subgroups, each subgroup has fixed size)
 
     //for the normal order of residual blocks: proc, obs, X0, here offset should be cnt_resiblock_proc
     void add_groups_obs_subgroup(int cnt_resiblock_obs, int subgroup_size, int offset=0); //create automatic groups (for obs subgroups, each subgroup has fixed size)
 
+    void add_groups_xneigbor_subgroup(int cnt_resiblock_xneighbor, int subgroup_size, int offset=0);
 
 };
 
@@ -106,8 +122,10 @@ struct ResiBlockGroup_Config{
     bool output_cost_groups = false;
     bool output_obs_subgroups = false;
     bool output_proc_subgroups = false;
+    bool output_xneighbor_subgroups = false;
     int obs_subgroup_size = 1;
     int proc_subgroup_size = 1;
+    int xneighbor_subgroup_size = 1;
     string xb_cost_filename; 
     string xa_cost_filename;
 

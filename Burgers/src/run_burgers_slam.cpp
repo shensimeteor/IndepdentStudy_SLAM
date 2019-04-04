@@ -67,6 +67,8 @@ int main(int argc, char** argv) {
     for(int i=0; i< obss.nobs; i++){
         int ix=obss.obs[i].ix;
         int it=obss.obs[i].it;
+        if(it > bgslam.window_steps) 
+            break;
         double obs_value=obss.obs[i].value;
         double obs_stdv =obss.obs[i].error;
         CostFunction* cost_functionObs = CostFunctorObs::createAutoDiffCostFunction(ix, obs_value, obs_stdv*obs_stdv); 
@@ -75,6 +77,7 @@ int main(int argc, char** argv) {
         cnt_resiblock_obs++;
     }
     
+    // -3. initial background constraint (optional)
     int cnt_resiblock_x0 = 0;
     if(bgslam.xb0_constraint){
         double xb0_err_var = bgslam.xb0_err_stdv * bgslam.xb0_err_stdv; 
@@ -85,6 +88,28 @@ int main(int argc, char** argv) {
             cnt_resiblock_x0++;
         }
     }
+    // -4. neighbor constraint (optional)
+    int cnt_resiblock_xneighbor = 0;
+    if(bgslam.xneighbor_constraint){
+        double xneighbor_diff_variance = bgslam.xneighbor_diff_stdv * bgslam.xneighbor_diff_stdv;
+        int tend = bgslam.window_steps;
+        if(bgslam.xneighbor_only_x0) {
+            tend = 0;
+        }
+        for(int t=0; t<=tend; t++){
+            for(int i=0; i<nx; i++){
+                CostFunction* cost_functionXnbr;
+                if(bgslam.xneighbor_constraint_xa_dxa == "xa"){
+                    cost_functionXnbr = CostFunctorXneighbor::createAutoDiffCostFunction(xneighbor_diff_variance);
+                }else{
+                    cost_functionXnbr = CostFunctorXneighbor::createAutoDiffCostFunction(xneighbor_diff_variance, Xs[t][(i-1+nx)%nx], Xs[t][i], Xs[t][(i+1)%nx]);
+                }
+                ResidualBlockId id = problem.AddResidualBlock(cost_functionXnbr, NULL, &Xs[t][i], &Xs[t][(i-1+nx)%nx], &Xs[t][(i+1)%nx]);
+                resblock_ids.push_back(id);
+                cnt_resiblock_xneighbor++;
+            }
+        }
+    }
     cout<< "[log] Problem Defined" << endl; 
 
     //evaluate before solve
@@ -92,12 +117,15 @@ int main(int argc, char** argv) {
     if(rbgroup_conf.output_cost_groups){
         //set groups & subgroups
         rbgroup.clear_groups();
-        rbgroup.add_groups_byComponent(cnt_resiblock_proc, cnt_resiblock_obs, cnt_resiblock_x0);
+        rbgroup.add_groups_byComponent(cnt_resiblock_proc, cnt_resiblock_obs, cnt_resiblock_x0, cnt_resiblock_xneighbor);
         if(rbgroup_conf.output_proc_subgroups){
             rbgroup.add_groups_proc_subgroup(cnt_resiblock_proc, rbgroup_conf.proc_subgroup_size, 0);
         }
         if(rbgroup_conf.output_obs_subgroups){
             rbgroup.add_groups_obs_subgroup(cnt_resiblock_obs, rbgroup_conf.obs_subgroup_size, cnt_resiblock_proc);
+        }
+        if(rbgroup_conf.output_xneighbor_subgroups){
+            rbgroup.add_groups_xneigbor_subgroup(cnt_resiblock_xneighbor, rbgroup_conf.xneighbor_subgroup_size, cnt_resiblock_proc+cnt_resiblock_obs);
         }
         //evaluate all 
         rbgroup.evaluate_all(problem, resblock_ids);

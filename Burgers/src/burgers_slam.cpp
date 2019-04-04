@@ -36,6 +36,14 @@ Burgers_SLAM::Burgers_SLAM(const char* config_file, const char* config_path){
             this->proc_err_stdv = slamda["proc_err_stdv"];
         if(slamda.exists("max_num_iterations"))
             this->max_num_iterations = slamda["max_num_iterations"];
+        if(slamda.exists("xneighbor_constraint"))
+            this->xneighbor_constraint = slamda["xneighbor_constraint"];
+        if(slamda.exists("xneighbor_only_x0"))
+            this->xneighbor_only_x0 = slamda["xneighbor_only_x0"];
+        if(slamda.exists("xneighbor_constraint_xa_dxa"))
+            slamda.lookupValue("xneighbor_constraint_xa_dxa", this->xneighbor_constraint_xa_dxa);
+        if(slamda.exists("xneighbor_diff_stdv"))
+            this->xneighbor_diff_stdv = slamda["xneighbor_diff_stdv"];
         slamda.lookupValue("xbs_file", this->xbs_file);
         slamda.lookupValue("obs_file", this->obs_file);
         slamda.lookupValue("xas_file", this->xas_file);
@@ -118,6 +126,23 @@ CostFunction* CostFunctorX0::createAutoDiffCostFunction(double init_error_varian
     return new AutoDiffCostFunction<CostFunctorX0, 1, 1>(new CostFunctorX0(init_error_variance, init_priori));
 }
 
+//CostFunctorXneighbor
+CostFunctorXneighbor::CostFunctorXneighbor(double neighbor_diff_variance, double xb0, double xb1, double xb2){
+    this->neighbor_diff_variance = neighbor_diff_variance;
+    this->neighbor_diff_sqrtinv = sqrt(1./neighbor_diff_variance);
+    this->xb0 = xb0;
+    this->xb1 = xb1;
+    this->xb2 = xb2;
+}
+
+template <typename T> bool CostFunctorXneighbor::operator()(const T* const x1, const T* const x0, const T* const x2, T* residual) const{
+    residual[0] = neighbor_diff_sqrtinv * ( (x1[0]-xb1) - (x0[0]-xb0+x2[0]-xb2)/2.0);
+    return true;
+}
+
+CostFunction* CostFunctorXneighbor::createAutoDiffCostFunction(double neighbor_diff_variance, double xb0, double xb1, double xb2){
+    return new AutoDiffCostFunction<CostFunctorXneighbor, 1, 1, 1, 1>(new CostFunctorXneighbor(neighbor_diff_variance, xb0, xb1, xb2));
+}
 
 //CostFunction Evaluator
 
@@ -176,11 +201,12 @@ void ResiBlockGroup::clear_groups(){
 }
 
 //into groups: all_proc, all_obs, all_x0, 
-void ResiBlockGroup::add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0){
+void ResiBlockGroup::add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0, int cnt_resiblock_xneighbor){
     add_resi_block_group("all_proc", 0, cnt_resiblock_proc-1);
     add_resi_block_group("all_obs", cnt_resiblock_proc, cnt_resiblock_proc+cnt_resiblock_obs-1);
     add_resi_block_group("all_X0", cnt_resiblock_obs+cnt_resiblock_proc, cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0-1);
-    add_resi_block_group("all_all", 0, cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0-1);
+    add_resi_block_group("all_xneighbor", cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0,  cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0+cnt_resiblock_xneighbor-1);
+    add_resi_block_group("all_all", 0, cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0+cnt_resiblock_xneighbor-1);
 }
 
 void ResiBlockGroup::add_groups_proc_subgroup(int cnt_resiblock_proc, int subgroup_size, int offset){
@@ -193,13 +219,24 @@ void ResiBlockGroup::add_groups_proc_subgroup(int cnt_resiblock_proc, int subgro
     }
 }
 
-//for the normal order of residual blocks: proc, obs, X0, here offset should be cnt_resiblock_proc
+//for the normal order of residual blocks: proc, obs, X0, xneighbor, here offset should be cnt_resiblock_proc
 void ResiBlockGroup::add_groups_obs_subgroup(int cnt_resiblock_obs, int subgroup_size, int offset){
     int ngroup = ceil(cnt_resiblock_obs *1.0/ subgroup_size);
     for(int i=0; i< ngroup; i++){
         int istart = i*subgroup_size + offset;
         int iend = offset+ (i<ngroup-1? (i+1)*subgroup_size-1 : cnt_resiblock_obs-1) ;
         string name = string("obs_")+to_string(i+1);
+        add_resi_block_group(name, istart, iend);
+    }
+}
+
+
+void ResiBlockGroup::add_groups_xneigbor_subgroup(int cnt_resiblock_xneighbor, int subgroup_size, int offset){
+    int ngroup = ceil(cnt_resiblock_xneighbor *1.0/ subgroup_size);
+    for(int i=0; i< ngroup; i++){
+        int istart = i*subgroup_size + offset;
+        int iend = offset+ (i<ngroup-1? (i+1)*subgroup_size-1 : cnt_resiblock_xneighbor-1) ;
+        string name = string("xneighbor_")+to_string(i+1);
         add_resi_block_group(name, istart, iend);
     }
 }
@@ -222,6 +259,11 @@ ResiBlockGroup_Config::ResiBlockGroup_Config(const char* config_file, const char
                 this->output_proc_subgroups = slamda["output_proc_subgroups"];
             if(this->output_proc_subgroups){
                 this->proc_subgroup_size = slamda["proc_subgroup_size"];
+            }
+            if(slamda.exists("output_xneighbor_subgroups"))
+                this->output_xneighbor_subgroups = slamda["output_xneighbor_subgroups"];
+            if(this->output_xneighbor_subgroups){
+                this->xneighbor_subgroup_size = slamda["xneighbor_subgroup_size"];
             }
             slamda.lookupValue("xb_cost_filename", this->xb_cost_filename);
             slamda.lookupValue("xa_cost_filename", this->xa_cost_filename);

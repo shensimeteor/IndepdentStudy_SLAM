@@ -1,0 +1,71 @@
+[log] Read config from burgers_conf.in -- model.burgers
+[log] Read config from burgers_conf.in -- da_4dvar_experiment
+[log] Read Xb0 from xb0.bin
+[log] Read Obs from ob0.csv;  n_obs = 20
+[log] Group Obs into 1 groups; n_obs = 20
+vector_size = 24
+[log] Read CovB0
+[log] Added Background Residual Block
+[log] Added Observation Residual Block
+[log] Problem Defined
+run finish
+run finish
+run finish
+run finish
+run finish
+run finish
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  1.297621e+01    0.00e+00    3.76e+00   0.00e+00   0.00e+00  1.00e+04        0    3.76e-01    3.77e-01
+run finish
+run finish
+run finish
+run finish
+run finish
+run finish
+run finish
+   1  5.313943e+00    7.66e+00    3.76e-04   2.38e+00   1.00e+00  3.00e+04        1    3.65e-01    7.41e-01
+run finish
+Ceres Solver Report: Iterations: 2, Initial cost: 1.297621e+01, Final cost: 5.313943e+00, Termination: CONVERGENCE
+
+Solver Summary (v 2.0.0-eigen-(3.2.92)-lapack-suitesparse-(4.4.6)-cxsparse-(3.1.4)-eigensparse-no_openmp)
+
+                                     Original                  Reduced
+Parameter blocks                            1                        1
+Parameters                                 24                       24
+Residual blocks                             2                        2
+Residuals                                  44                       44
+
+Minimizer                        TRUST_REGION
+
+Sparse linear algebra library    SUITE_SPARSE
+Trust region strategy     LEVENBERG_MARQUARDT
+
+                                        Given                     Used
+Linear solver          SPARSE_NORMAL_CHOLESKY   SPARSE_NORMAL_CHOLESKY
+Threads                                     1                        1
+Linear solver ordering              AUTOMATIC                        1
+
+Cost:
+Initial                          1.297621e+01
+Final                            5.313943e+00
+Change                           7.662271e+00
+
+Minimizer iterations                        2
+Successful steps                            2
+Unsuccessful steps                          0
+
+Time (in seconds):
+Preprocessor                         0.000176
+
+  Residual only evaluation           0.000346 (2)
+  Jacobian & residual evaluation     0.740682 (2)
+  Linear solver                      0.000189 (2)
+Minimizer                            0.741345
+
+Postprocessor                        0.000008
+Total                                0.741529
+
+Termination:                      CONVERGENCE (Function tolerance reached. |cost_change|/cost: 1.456122e-08 <= 1.000000e-06)
+
+[log] Finish Optimization and get W
+[log] Finish Re-run model and output xas

@@ -1,0 +1,13 @@
+{   
+    "fake_obs": {
+        "nx": 1000,
+        "it": 0,
+        "3dvar_xas_file": "xa0.bin",
+        "obs_csv": "ob0.csv",
+        "xbs_file": "xb0.bin",
+        "slam_xb0_err_stdv": 0.2,
+        "slam_obs_err_stdv": 0.05,
+        "output_fakeobs_csv": "faked_ob0.csv"
+    }
+}
+

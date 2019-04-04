@@ -1,0 +1,19 @@
+{
+    "cov_config_array":
+    [
+    {
+        "stdv": 1.0,
+        "correlation_model" : "gaussian", 
+        "modes_eigvalue_ratio_threshold": 0.98, 
+        "nx": 1000, 
+        "nx_periodic": true,
+        "gaussian_reflen_grid": 50,
+        "output_Cov_matrix": "output/Cov_B0.bin",
+        "output_Cov_modes": "output/CovSqrt_B0.bin",
+        "out_image_cov": "output/image_B0.png",
+        "out_image_cov_reconstructed": "output/image_B0_reconstructed.png",
+        "singleobs_locations": [ 0, 300, 600, 900], 
+        "out_image_format_singleobs_cov": "output/image_singleObsCov_%0.3d.png"
+    }
+    ]
+}
