@@ -1,0 +1,17 @@
+model : 
+{
+  burgers : 
+  {
+    nx = 1000;
+    dx = 40000.0;
+    R = 0.000001;
+    dt = 600.0;
+    bc_option = 2;
+    linear_option = 2;
+    stochastic_option = 2;
+    preset_seed = false;
+    seed = 206409302L;
+    stochastic_proc_err_mean = 0.0;
+    stochastic_proc_err_stdv = 0.0;
+  };
+};

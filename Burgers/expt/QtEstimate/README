@@ -1,0 +1,3 @@
+For setting1, estimate Qt
+ (Qt is accumulation of 6 hour error integration)
+ (Qt_i = COV(M_noisy (x_{t-6}) - M (x_{t-6)))
