@@ -9,7 +9,7 @@ using namespace libconfig;
 
 struct ModelRun {
     int init_condition_pattern = 1; 
-    int init_condition_v0 = -20;
+    double init_condition_v0 = -20.0;
     int n_steps = 1440;
     int output_t_ratio=1, output_x_ratio=1;
     string output_filename;
@@ -25,8 +25,14 @@ struct ModelRun {
             Setting& modelrun = root.lookup(config_path);
             if(modelrun.exists("init_condition_pattern"))
                 this->init_condition_pattern = modelrun["init_condition_pattern"];
-            if(modelrun.exists("init_condition_v0"))
-                this->init_condition_v0 = modelrun["init_condition_v0"];
+            if(modelrun.exists("init_condition_v0")){
+                if(modelrun["init_condition_v0"].getType() == Setting::Type::TypeInt){
+                    int tmp = modelrun["init_condition_v0"];
+                    this->init_condition_v0 = (double)tmp;
+                }else{
+                    this->init_condition_v0 = modelrun["init_condition_v0"] ;
+                }
+            }
             if(modelrun.exists("n_steps"))
                 this->n_steps = modelrun["n_steps"];
             if(modelrun.exists("output_t_ratio"))
@@ -81,7 +87,7 @@ int main(){
     Burgers bg("burgers_conf.in", "model.burgers");
     cout<< "[log] Read config from burgers_conf.in" << endl;
     bg.outputConfig("burgers_conf.out");
-    cout<< "[log] Output config too burgers_conf.out" << endl;
+    cout<< "[log] Output config to burgers_conf.out" << endl;
     
     ModelRun modelrun("burgers_conf.in", "model_run");
     cout<<"[log] output_filename = " << modelrun.output_filename <<endl;
