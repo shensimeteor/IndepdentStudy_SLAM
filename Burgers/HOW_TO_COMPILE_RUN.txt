@@ -1,0 +1,62 @@
+Here is a brief introduction for building:
+1. You may need to install Libconfig++ (https://hyperrealm.github.io/libconfig/) and Ceres-solver (of course). And it's better if you installed them with root permission. Otherwise, Makefile or CMakeLists.txt may need some changes (for libraries path)
+2. clone the repo: https://github.com/shensimeteor/IndepdentStudy_SLAM/tree/master/Burgers. 
+3. in Burgers/build/, run: make.  This will build run_burgers.x, the executable to run Burgers model (just model integrations)
+4. in Burgers/build_ceres/, run:  rm CMakeCache.txt;  cmake .; make. This will build run_burgers_slam.x, run_burgers_4dvar.x, 2 executables to run SLAM or 4DVar data assimilation.
+-- You can also do the building in Burgers/src/,  run: ./compile.sh. It will do 3 & 4 automatically.
+5. add "Burgers/scripts/", "Burgers/obs_gen/", "Burgers/cov_gen/" to PATH. 
+
+Here is a brief introduction for running.
+I have "Burgers/expt/" to save my experiments. 2 directories inside, "setting1/" and "setting2/". As stated in "Burgers/expt/README.txt", "setting1" differs with "setting2" on how the truth run is generated.  I will use "setting1/" as an example to show how I run the executables, (all directories below are under "Burgers/expt/setting1/". )
+
+1. generate priori run by simply integrating Burgers model. 
+   in "normal_run/", link run_burgers.x here, run: ./run_burgers.x. It will generate "output.bin" 
+   the "burgers_conf.in" is the file to config model settings. run_burgers.x will read "model" and "model_run" components in "burgers_conf.in" to know the model configuration and how long the integration is. If you keep this burgers_conf.in unchanged, "output.bin" will have 1441 time steps output.bin (size of output.bin is 1441*1000*8 = 11528000, 1000 for nx, 8 for double)
+   run: ExtractAPeriod.py output.bin xbs200-488.bin 200 289. This is to extract 200-488 time steps from output.bin and create new file: xbs200-488.bin.
+
+2.generate truth run by integrating "stochastic verion" of Burgers model.
+   in "perturbed_run/", everything is same with "normal_run/" but "burger_conf.in" has set "stochastic_option" and "stochastic_proc_err_stdv" differently. 
+   Similarly, run: ./run_burgers.x to generate "output.bin" and run:  ExtractAPeriod.py output.bin xts200-488.bin 200 289 to generate truth: xts200-289.bin
+
+3. generate obs from truth.
+   in "obs_gen/", run: FlexGenObs.py ../perturbed_run/xts200-488.bin fgobs_conf.json obs.csv  . obs.csv will be generated 
+   "fgobs_conf.json" specifies location of observations and measurement noise. 
+
+4. run slam:
+   in "slam_test/", link "run_burgers_slam.x", "obs.csv", "xbs.bin" (linked to normal_run/xbs200-488.bin ) here. run: ./run_burgers_slam.x . It will generate "xas.bin", the posteriori state. 
+   "run_burgers_slam.x" will read burgers_conf.in (the "model"  and "da_experiment" components). Note, "xb0_constraint" and "xb0_err_stdv" specifiy the initial-priori constraint. You can set "xb0_constraint=false" to turn it off. "proc_err_stdv" is the process noise err std-deviation used in cost function. 
+   output files: "cost_groups_xb.csv", "cost_groups_xa.csv" shows cost function values for xb (priori) and xa (posteri) for 3 components (initial-priori constraint, observation constraint, process noise constraint). 
+   run: ShortSummaryDiff.py xbs.bin ../perturbed_run/xts200-488.bin, to get time-averaged RMSE (prior against truth) 
+        ShortSummaryDiff.py xas.bin ../perturbed_run/xts200-488.bin, to get  time-averaged RMSE (posteriori against truth) 
+        QuickPlots.py ../perturbed_run/xts200-488.bin, to generate "images" directory to visualize results
+
+5. run 4dvar (strong-constraint):
+ The example directory is Burgers/expt/setting1/4dvar_test. Any directory below is under this directory, unless otherwise stated.
+
+ a. The first step is to generate background error covariance for initial time-step (i.e., B_0  in https://github.com/shensimeteor/IndepdentStudy_SLAM/blob/master/Equations/SLAM_4DVar_Equations.ipynb). I use Gaussian shape distance-correlation model here, i.e. the correlation between 2 spatial points is determined by their distance, by a function similar to Gaussian distribution, ( corr = exp (-dis^2 / (2* ref^2))) , dis is distance, ref is reference length.
+ It is run in the "covgen_gaussian/", i.e. by run: "FlexGenCov.py fgcov_conf.json"
+ Note:
+ -  mkdir "output/" before running
+ -  the most important setting in fgconv_conf.json is gaussian_reflen_grid, i.e. the ref in the equation, in the unit of "grid point". Of course, "stdv" (std deviation) is also important but that can also be tuned in the config file for run_burgers_4dvar.x. So I leave it 1.0 here for now.
+ -  After running the command, you'll get output & figures in output/. The most important output is CovSqrt_B0.bin, which is the sqrt-root of   B_0   matrix, i.e. E_0 in https://github.com/shensimeteor/IndepdentStudy_SLAM/blob/master/Equations/SLAM_4DVar_Equations.ipynb 
+
+ b. Then you can run 4DVar, in "test_strong/".
+ - link the obs.csv file here, (same with SLAM run)
+ - create xb0.bin here (the initial time-step for the background. Unlike SLAM, 4DVar & weak 4DVar only needs the initial time-step background)
+    You can use tool "ExtractAPeriod.py xbs.bin xb0.bin 0 1"  to extract the initial time-step out of xbs.bin
+    - mkdir "cov/", and link the CovSqrt_B0.bin inside, rename as B0_modes.bin
+    - double check the "burgers_conf.in" file ("da_4dvar_experiment" part) , especially "weak_constraint" (false here), "B0_inflate_factor" (that's how you can tune the stdv here, i.e. this value is the stdv^2, since stdv was set 1.0 in step a)
+    - run: ./run_burgers_4dvar.x . The output is "xas.bin"
+    - Similar with SLAM run, you can use "ShortSummaryDiff.py" and "QuickPlots.py" to generate RMSE and figures. 
+
+6. run weak 4DVar.
+    a. You need to generate Qt (model error covariance) in a similar way with B0. I just use the same file here, so I don't need to generate it again.
+
+    b. in "test_weak/"
+    - similar with 4DVar, you need "obs.csv", "xb0.bin", "cov/B0_modes.bin"
+    - you need to have Qt files in the "cov/" as well, e.g. "cov/Q006_modes.bin", "cov/Q012_modes.bin", ... "cov/Q288_modes.bin", i.e. one Qt every 6 steps. As I just use the same B0 file, I just link cov/B0_modes.bin to these files. A quick way to do that is to run the command "LinkAllQt.py B0_modes.bin 6 6 288" inside "cov/" directory.
+    - double check the "burgers_conf.in" file ("da_4dvar_experiment" part) , especially "weak_constraint" (true here), B0_inflate_factor and Qt_inflate_factor 
+    - run: ./run_burgers_4dvar.x. The output is “xas.bin"
+    - The diagnostic part is same with strong 4DVar/SLAM
+
+                                                                

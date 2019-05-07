@@ -5319,3 +5319,2917 @@ Source file was:
        google::ParseCommandLineFlags(&argc, &argv, true);
        return 0;
      }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_972f0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_972f0.dir/build.make CMakeFiles/cmTC_972f0.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_972f0.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_972f0.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_972f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_972f0.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_972f0.dir/CheckIncludeFile.c.o  -o cmTC_972f0 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4446/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f4446.dir/build.make CMakeFiles/cmTC_f4446.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f4446.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f4446.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f4446
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4446.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f4446.dir/CheckFunctionExists.c.o  -o cmTC_f4446 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c2c03/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c2c03.dir/build.make CMakeFiles/cmTC_c2c03.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c2c03.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_c2c03.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c2c03
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2c03.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_c2c03.dir/src.cxx.o  -o cmTC_c2c03 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c759a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c759a.dir/build.make CMakeFiles/cmTC_c759a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c759a.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c759a.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c759a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c759a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c759a.dir/CheckIncludeFile.c.o  -o cmTC_c759a -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3c3a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3c3a7.dir/build.make CMakeFiles/cmTC_3c3a7.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3c3a7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3c3a7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3c3a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c3a7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3c3a7.dir/CheckFunctionExists.c.o  -o cmTC_3c3a7 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_338bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_338bf.dir/build.make CMakeFiles/cmTC_338bf.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_338bf.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_338bf.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_338bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_338bf.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_338bf.dir/src.cxx.o  -o cmTC_338bf -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6dbd9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6dbd9.dir/build.make CMakeFiles/cmTC_6dbd9.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6dbd9.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6dbd9.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6dbd9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6dbd9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6dbd9.dir/CheckIncludeFile.c.o  -o cmTC_6dbd9 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f89be/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f89be.dir/build.make CMakeFiles/cmTC_f89be.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f89be.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f89be.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f89be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f89be.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f89be.dir/CheckFunctionExists.c.o  -o cmTC_f89be -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_40220/fast"
+/usr/bin/make -f CMakeFiles/cmTC_40220.dir/build.make CMakeFiles/cmTC_40220.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_40220.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_40220.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_40220
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40220.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_40220.dir/src.cxx.o  -o cmTC_40220 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7d30c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7d30c.dir/build.make CMakeFiles/cmTC_7d30c.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7d30c.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_7d30c.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_7d30c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d30c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7d30c.dir/CheckIncludeFile.c.o  -o cmTC_7d30c -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e7e42/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7e42.dir/build.make CMakeFiles/cmTC_e7e42.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7e42.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e7e42.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7e42
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7e42.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e7e42.dir/CheckFunctionExists.c.o  -o cmTC_e7e42 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f1471/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f1471.dir/build.make CMakeFiles/cmTC_f1471.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f1471.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_f1471.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f1471
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1471.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_f1471.dir/src.cxx.o  -o cmTC_f1471 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c109/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c109.dir/build.make CMakeFiles/cmTC_6c109.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c109.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6c109.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6c109
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c109.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6c109.dir/CheckIncludeFile.c.o  -o cmTC_6c109 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cdab5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cdab5.dir/build.make CMakeFiles/cmTC_cdab5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cdab5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cdab5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cdab5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdab5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_cdab5.dir/CheckFunctionExists.c.o  -o cmTC_cdab5 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c757b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c757b.dir/build.make CMakeFiles/cmTC_c757b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c757b.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_c757b.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c757b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c757b.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_c757b.dir/src.cxx.o  -o cmTC_c757b -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d5f6d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d5f6d.dir/build.make CMakeFiles/cmTC_d5f6d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d5f6d.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_d5f6d.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d5f6d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5f6d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_d5f6d.dir/CheckIncludeFile.c.o  -o cmTC_d5f6d -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bbab3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bbab3.dir/build.make CMakeFiles/cmTC_bbab3.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bbab3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bbab3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bbab3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bbab3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bbab3.dir/CheckFunctionExists.c.o  -o cmTC_bbab3 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0f46a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0f46a.dir/build.make CMakeFiles/cmTC_0f46a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0f46a.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_0f46a.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0f46a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f46a.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_0f46a.dir/src.cxx.o  -o cmTC_0f46a -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_001af/fast"
+/usr/bin/make -f CMakeFiles/cmTC_001af.dir/build.make CMakeFiles/cmTC_001af.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_001af.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_001af.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_001af
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_001af.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_001af.dir/CheckIncludeFile.c.o  -o cmTC_001af -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_08755/fast"
+/usr/bin/make -f CMakeFiles/cmTC_08755.dir/build.make CMakeFiles/cmTC_08755.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08755.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_08755.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_08755
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08755.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_08755.dir/CheckFunctionExists.c.o  -o cmTC_08755 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_acd0e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_acd0e.dir/build.make CMakeFiles/cmTC_acd0e.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_acd0e.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_acd0e.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_acd0e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acd0e.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_acd0e.dir/src.cxx.o  -o cmTC_acd0e -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b9ec6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b9ec6.dir/build.make CMakeFiles/cmTC_b9ec6.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b9ec6.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_b9ec6.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b9ec6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9ec6.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b9ec6.dir/CheckIncludeFile.c.o  -o cmTC_b9ec6 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_44108/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44108.dir/build.make CMakeFiles/cmTC_44108.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44108.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_44108.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_44108
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44108.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_44108.dir/CheckFunctionExists.c.o  -o cmTC_44108 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f0ffe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f0ffe.dir/build.make CMakeFiles/cmTC_f0ffe.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f0ffe.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_f0ffe.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f0ffe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0ffe.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_f0ffe.dir/src.cxx.o  -o cmTC_f0ffe -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_61a9d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_61a9d.dir/build.make CMakeFiles/cmTC_61a9d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_61a9d.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_61a9d.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_61a9d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61a9d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_61a9d.dir/CheckIncludeFile.c.o  -o cmTC_61a9d -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0834f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0834f.dir/build.make CMakeFiles/cmTC_0834f.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0834f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0834f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0834f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0834f.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_0834f.dir/CheckFunctionExists.c.o  -o cmTC_0834f -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fab8b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fab8b.dir/build.make CMakeFiles/cmTC_fab8b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fab8b.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_fab8b.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_fab8b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fab8b.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_fab8b.dir/src.cxx.o  -o cmTC_fab8b -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dacf9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dacf9.dir/build.make CMakeFiles/cmTC_dacf9.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dacf9.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_dacf9.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_dacf9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dacf9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_dacf9.dir/CheckIncludeFile.c.o  -o cmTC_dacf9 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8319d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8319d.dir/build.make CMakeFiles/cmTC_8319d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8319d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8319d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8319d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8319d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8319d.dir/CheckFunctionExists.c.o  -o cmTC_8319d -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_650a4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_650a4.dir/build.make CMakeFiles/cmTC_650a4.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_650a4.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_650a4.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_650a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_650a4.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_650a4.dir/src.cxx.o  -o cmTC_650a4 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4978e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4978e.dir/build.make CMakeFiles/cmTC_4978e.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4978e.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_4978e.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4978e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4978e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_4978e.dir/CheckIncludeFile.c.o  -o cmTC_4978e -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4aa2d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4aa2d.dir/build.make CMakeFiles/cmTC_4aa2d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4aa2d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4aa2d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4aa2d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4aa2d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4aa2d.dir/CheckFunctionExists.c.o  -o cmTC_4aa2d -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_11395/fast"
+/usr/bin/make -f CMakeFiles/cmTC_11395.dir/build.make CMakeFiles/cmTC_11395.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_11395.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_11395.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_11395
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11395.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_11395.dir/src.cxx.o  -o cmTC_11395 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3a455/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a455.dir/build.make CMakeFiles/cmTC_3a455.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3a455.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_3a455.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3a455
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a455.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3a455.dir/CheckIncludeFile.c.o  -o cmTC_3a455 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_88794/fast"
+/usr/bin/make -f CMakeFiles/cmTC_88794.dir/build.make CMakeFiles/cmTC_88794.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_88794.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_88794.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_88794
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88794.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_88794.dir/CheckFunctionExists.c.o  -o cmTC_88794 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_79ddb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_79ddb.dir/build.make CMakeFiles/cmTC_79ddb.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_79ddb.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_79ddb.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_79ddb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79ddb.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_79ddb.dir/src.cxx.o  -o cmTC_79ddb -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_08845/fast"
+/usr/bin/make -f CMakeFiles/cmTC_08845.dir/build.make CMakeFiles/cmTC_08845.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08845.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_08845.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_08845
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08845.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_08845.dir/CheckIncludeFile.c.o  -o cmTC_08845 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e39d7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e39d7.dir/build.make CMakeFiles/cmTC_e39d7.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e39d7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e39d7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e39d7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e39d7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e39d7.dir/CheckFunctionExists.c.o  -o cmTC_e39d7 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6f566/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6f566.dir/build.make CMakeFiles/cmTC_6f566.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6f566.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_6f566.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6f566
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f566.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_6f566.dir/src.cxx.o  -o cmTC_6f566 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_93440/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93440.dir/build.make CMakeFiles/cmTC_93440.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_93440.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_93440.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_93440
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93440.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_93440.dir/CheckIncludeFile.c.o  -o cmTC_93440 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_09f37/fast"
+/usr/bin/make -f CMakeFiles/cmTC_09f37.dir/build.make CMakeFiles/cmTC_09f37.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_09f37.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_09f37.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_09f37
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09f37.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_09f37.dir/CheckFunctionExists.c.o  -o cmTC_09f37 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_003ec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_003ec.dir/build.make CMakeFiles/cmTC_003ec.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_003ec.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_003ec.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_003ec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_003ec.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_003ec.dir/src.cxx.o  -o cmTC_003ec -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3635e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3635e.dir/build.make CMakeFiles/cmTC_3635e.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3635e.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_3635e.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3635e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3635e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3635e.dir/CheckIncludeFile.c.o  -o cmTC_3635e -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a21e5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a21e5.dir/build.make CMakeFiles/cmTC_a21e5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a21e5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a21e5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a21e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a21e5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a21e5.dir/CheckFunctionExists.c.o  -o cmTC_a21e5 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_19fcc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_19fcc.dir/build.make CMakeFiles/cmTC_19fcc.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_19fcc.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_19fcc.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_19fcc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19fcc.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_19fcc.dir/src.cxx.o  -o cmTC_19fcc -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_02641/fast"
+/usr/bin/make -f CMakeFiles/cmTC_02641.dir/build.make CMakeFiles/cmTC_02641.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_02641.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_02641.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_02641
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02641.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_02641.dir/CheckIncludeFile.c.o  -o cmTC_02641 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5503e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5503e.dir/build.make CMakeFiles/cmTC_5503e.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5503e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5503e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5503e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5503e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5503e.dir/CheckFunctionExists.c.o  -o cmTC_5503e -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0b830/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0b830.dir/build.make CMakeFiles/cmTC_0b830.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0b830.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_0b830.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0b830
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b830.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_0b830.dir/src.cxx.o  -o cmTC_0b830 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b39aa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b39aa.dir/build.make CMakeFiles/cmTC_b39aa.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b39aa.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_b39aa.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b39aa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b39aa.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b39aa.dir/CheckIncludeFile.c.o  -o cmTC_b39aa -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b9d43/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b9d43.dir/build.make CMakeFiles/cmTC_b9d43.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b9d43.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b9d43.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b9d43
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9d43.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b9d43.dir/CheckFunctionExists.c.o  -o cmTC_b9d43 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d04a6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d04a6.dir/build.make CMakeFiles/cmTC_d04a6.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d04a6.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_d04a6.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d04a6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d04a6.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_d04a6.dir/src.cxx.o  -o cmTC_d04a6 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e0b15/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e0b15.dir/build.make CMakeFiles/cmTC_e0b15.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0b15.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e0b15.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e0b15
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0b15.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e0b15.dir/CheckIncludeFile.c.o  -o cmTC_e0b15 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_27861/fast"
+/usr/bin/make -f CMakeFiles/cmTC_27861.dir/build.make CMakeFiles/cmTC_27861.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_27861.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_27861.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_27861
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27861.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_27861.dir/CheckFunctionExists.c.o  -o cmTC_27861 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_86ee5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_86ee5.dir/build.make CMakeFiles/cmTC_86ee5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_86ee5.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_86ee5.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_86ee5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86ee5.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_86ee5.dir/src.cxx.o  -o cmTC_86ee5 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_81d6e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_81d6e.dir/build.make CMakeFiles/cmTC_81d6e.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_81d6e.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_81d6e.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_81d6e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81d6e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_81d6e.dir/CheckIncludeFile.c.o  -o cmTC_81d6e -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8efa8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8efa8.dir/build.make CMakeFiles/cmTC_8efa8.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8efa8.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8efa8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8efa8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8efa8.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8efa8.dir/CheckFunctionExists.c.o  -o cmTC_8efa8 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4c616/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c616.dir/build.make CMakeFiles/cmTC_4c616.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4c616.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_4c616.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4c616
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c616.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_4c616.dir/src.cxx.o  -o cmTC_4c616 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e1bd2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e1bd2.dir/build.make CMakeFiles/cmTC_e1bd2.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1bd2.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e1bd2.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e1bd2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1bd2.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e1bd2.dir/CheckIncludeFile.c.o  -o cmTC_e1bd2 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eaca8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eaca8.dir/build.make CMakeFiles/cmTC_eaca8.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eaca8.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eaca8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eaca8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eaca8.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_eaca8.dir/CheckFunctionExists.c.o  -o cmTC_eaca8 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_faf12/fast"
+/usr/bin/make -f CMakeFiles/cmTC_faf12.dir/build.make CMakeFiles/cmTC_faf12.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_faf12.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_faf12.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_faf12
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_faf12.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_faf12.dir/src.cxx.o  -o cmTC_faf12 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_859d3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_859d3.dir/build.make CMakeFiles/cmTC_859d3.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_859d3.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_859d3.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_859d3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_859d3.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_859d3.dir/CheckIncludeFile.c.o  -o cmTC_859d3 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8c8cd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8c8cd.dir/build.make CMakeFiles/cmTC_8c8cd.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8c8cd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8c8cd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8c8cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c8cd.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8c8cd.dir/CheckFunctionExists.c.o  -o cmTC_8c8cd -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1c0e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1c0e2.dir/build.make CMakeFiles/cmTC_1c0e2.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1c0e2.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_1c0e2.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1c0e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c0e2.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_1c0e2.dir/src.cxx.o  -o cmTC_1c0e2 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fef60/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fef60.dir/build.make CMakeFiles/cmTC_fef60.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fef60.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_fef60.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_fef60
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fef60.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fef60.dir/CheckIncludeFile.c.o  -o cmTC_fef60 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4a4c3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4a4c3.dir/build.make CMakeFiles/cmTC_4a4c3.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4a4c3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4a4c3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4a4c3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a4c3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4a4c3.dir/CheckFunctionExists.c.o  -o cmTC_4a4c3 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b77c8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b77c8.dir/build.make CMakeFiles/cmTC_b77c8.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b77c8.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_b77c8.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b77c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b77c8.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_b77c8.dir/src.cxx.o  -o cmTC_b77c8 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1f3e4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1f3e4.dir/build.make CMakeFiles/cmTC_1f3e4.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1f3e4.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1f3e4.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_1f3e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f3e4.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1f3e4.dir/CheckIncludeFile.c.o  -o cmTC_1f3e4 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5a985/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5a985.dir/build.make CMakeFiles/cmTC_5a985.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a985.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5a985.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5a985
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a985.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5a985.dir/CheckFunctionExists.c.o  -o cmTC_5a985 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9af01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9af01.dir/build.make CMakeFiles/cmTC_9af01.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9af01.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_9af01.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9af01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9af01.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_9af01.dir/src.cxx.o  -o cmTC_9af01 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8ddee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8ddee.dir/build.make CMakeFiles/cmTC_8ddee.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8ddee.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8ddee.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8ddee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ddee.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8ddee.dir/CheckIncludeFile.c.o  -o cmTC_8ddee -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fb8bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fb8bf.dir/build.make CMakeFiles/cmTC_fb8bf.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb8bf.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fb8bf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fb8bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb8bf.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_fb8bf.dir/CheckFunctionExists.c.o  -o cmTC_fb8bf -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aae86/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aae86.dir/build.make CMakeFiles/cmTC_aae86.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_aae86.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_aae86.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_aae86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aae86.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_aae86.dir/src.cxx.o  -o cmTC_aae86 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2988d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2988d.dir/build.make CMakeFiles/cmTC_2988d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2988d.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2988d.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2988d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2988d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2988d.dir/CheckIncludeFile.c.o  -o cmTC_2988d -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c2e1d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c2e1d.dir/build.make CMakeFiles/cmTC_c2e1d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2e1d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c2e1d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c2e1d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2e1d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c2e1d.dir/CheckFunctionExists.c.o  -o cmTC_c2e1d -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4165f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4165f.dir/build.make CMakeFiles/cmTC_4165f.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4165f.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_4165f.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4165f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4165f.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_4165f.dir/src.cxx.o  -o cmTC_4165f -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_97df1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_97df1.dir/build.make CMakeFiles/cmTC_97df1.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97df1.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_97df1.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_97df1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97df1.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_97df1.dir/CheckIncludeFile.c.o  -o cmTC_97df1 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a1cc4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a1cc4.dir/build.make CMakeFiles/cmTC_a1cc4.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a1cc4.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a1cc4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a1cc4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1cc4.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a1cc4.dir/CheckFunctionExists.c.o  -o cmTC_a1cc4 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4be71/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4be71.dir/build.make CMakeFiles/cmTC_4be71.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4be71.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_4be71.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4be71
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4be71.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_4be71.dir/src.cxx.o  -o cmTC_4be71 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bd27b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bd27b.dir/build.make CMakeFiles/cmTC_bd27b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd27b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_bd27b.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_bd27b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd27b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_bd27b.dir/CheckIncludeFile.c.o  -o cmTC_bd27b -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_75bf5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75bf5.dir/build.make CMakeFiles/cmTC_75bf5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_75bf5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_75bf5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_75bf5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75bf5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_75bf5.dir/CheckFunctionExists.c.o  -o cmTC_75bf5 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8b924/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8b924.dir/build.make CMakeFiles/cmTC_8b924.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8b924.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_8b924.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8b924
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b924.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_8b924.dir/src.cxx.o  -o cmTC_8b924 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_79acc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_79acc.dir/build.make CMakeFiles/cmTC_79acc.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_79acc.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_79acc.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_79acc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79acc.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_79acc.dir/CheckIncludeFile.c.o  -o cmTC_79acc -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8b66c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8b66c.dir/build.make CMakeFiles/cmTC_8b66c.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b66c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8b66c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8b66c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b66c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8b66c.dir/CheckFunctionExists.c.o  -o cmTC_8b66c -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8a865/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8a865.dir/build.make CMakeFiles/cmTC_8a865.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8a865.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_8a865.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8a865
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a865.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_8a865.dir/src.cxx.o  -o cmTC_8a865 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f60bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f60bc.dir/build.make CMakeFiles/cmTC_f60bc.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f60bc.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f60bc.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f60bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f60bc.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f60bc.dir/CheckIncludeFile.c.o  -o cmTC_f60bc -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_343ea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_343ea.dir/build.make CMakeFiles/cmTC_343ea.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_343ea.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_343ea.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_343ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_343ea.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_343ea.dir/CheckFunctionExists.c.o  -o cmTC_343ea -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e4412/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e4412.dir/build.make CMakeFiles/cmTC_e4412.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e4412.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_e4412.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e4412
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4412.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_e4412.dir/src.cxx.o  -o cmTC_e4412 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_13a89/fast"
+/usr/bin/make -f CMakeFiles/cmTC_13a89.dir/build.make CMakeFiles/cmTC_13a89.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13a89.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_13a89.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_13a89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13a89.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_13a89.dir/CheckIncludeFile.c.o  -o cmTC_13a89 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c7f3a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c7f3a.dir/build.make CMakeFiles/cmTC_c7f3a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7f3a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c7f3a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c7f3a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7f3a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c7f3a.dir/CheckFunctionExists.c.o  -o cmTC_c7f3a -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8756c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8756c.dir/build.make CMakeFiles/cmTC_8756c.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8756c.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_8756c.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8756c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8756c.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_8756c.dir/src.cxx.o  -o cmTC_8756c -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2ffc1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2ffc1.dir/build.make CMakeFiles/cmTC_2ffc1.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2ffc1.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2ffc1.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2ffc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ffc1.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2ffc1.dir/CheckIncludeFile.c.o  -o cmTC_2ffc1 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c7db/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c7db.dir/build.make CMakeFiles/cmTC_6c7db.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c7db.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6c7db.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6c7db
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c7db.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6c7db.dir/CheckFunctionExists.c.o  -o cmTC_6c7db -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0cf4f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0cf4f.dir/build.make CMakeFiles/cmTC_0cf4f.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0cf4f.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_0cf4f.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0cf4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cf4f.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_0cf4f.dir/src.cxx.o  -o cmTC_0cf4f -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_73a36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_73a36.dir/build.make CMakeFiles/cmTC_73a36.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73a36.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_73a36.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_73a36
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73a36.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_73a36.dir/CheckIncludeFile.c.o  -o cmTC_73a36 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_712a1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_712a1.dir/build.make CMakeFiles/cmTC_712a1.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_712a1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_712a1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_712a1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_712a1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_712a1.dir/CheckFunctionExists.c.o  -o cmTC_712a1 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5ea86/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5ea86.dir/build.make CMakeFiles/cmTC_5ea86.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5ea86.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_5ea86.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5ea86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ea86.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_5ea86.dir/src.cxx.o  -o cmTC_5ea86 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e9cb1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e9cb1.dir/build.make CMakeFiles/cmTC_e9cb1.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e9cb1.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e9cb1.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e9cb1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9cb1.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e9cb1.dir/CheckIncludeFile.c.o  -o cmTC_e9cb1 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c5acd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c5acd.dir/build.make CMakeFiles/cmTC_c5acd.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c5acd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c5acd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c5acd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5acd.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c5acd.dir/CheckFunctionExists.c.o  -o cmTC_c5acd -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3ff57/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ff57.dir/build.make CMakeFiles/cmTC_3ff57.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3ff57.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_3ff57.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3ff57
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ff57.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_3ff57.dir/src.cxx.o  -o cmTC_3ff57 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6d02c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d02c.dir/build.make CMakeFiles/cmTC_6d02c.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d02c.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6d02c.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6d02c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d02c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6d02c.dir/CheckIncludeFile.c.o  -o cmTC_6d02c -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_60c93/fast"
+/usr/bin/make -f CMakeFiles/cmTC_60c93.dir/build.make CMakeFiles/cmTC_60c93.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_60c93.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_60c93.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_60c93
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60c93.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_60c93.dir/CheckFunctionExists.c.o  -o cmTC_60c93 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_11e8a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_11e8a.dir/build.make CMakeFiles/cmTC_11e8a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_11e8a.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_11e8a.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_11e8a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11e8a.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_11e8a.dir/src.cxx.o  -o cmTC_11e8a -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2cd57/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2cd57.dir/build.make CMakeFiles/cmTC_2cd57.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2cd57.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2cd57.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2cd57
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cd57.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2cd57.dir/CheckIncludeFile.c.o  -o cmTC_2cd57 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dbdf1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dbdf1.dir/build.make CMakeFiles/cmTC_dbdf1.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dbdf1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_dbdf1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dbdf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbdf1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_dbdf1.dir/CheckFunctionExists.c.o  -o cmTC_dbdf1 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_43e7a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_43e7a.dir/build.make CMakeFiles/cmTC_43e7a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_43e7a.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_43e7a.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_43e7a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43e7a.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_43e7a.dir/src.cxx.o  -o cmTC_43e7a -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d4f55/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d4f55.dir/build.make CMakeFiles/cmTC_d4f55.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d4f55.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_d4f55.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d4f55
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4f55.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_d4f55.dir/CheckIncludeFile.c.o  -o cmTC_d4f55 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_891dd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_891dd.dir/build.make CMakeFiles/cmTC_891dd.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_891dd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_891dd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_891dd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_891dd.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_891dd.dir/CheckFunctionExists.c.o  -o cmTC_891dd -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_908a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_908a7.dir/build.make CMakeFiles/cmTC_908a7.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_908a7.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_908a7.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_908a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_908a7.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_908a7.dir/src.cxx.o  -o cmTC_908a7 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5a2f0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5a2f0.dir/build.make CMakeFiles/cmTC_5a2f0.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a2f0.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_5a2f0.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5a2f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a2f0.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_5a2f0.dir/CheckIncludeFile.c.o  -o cmTC_5a2f0 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ca3dd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ca3dd.dir/build.make CMakeFiles/cmTC_ca3dd.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca3dd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ca3dd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ca3dd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca3dd.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ca3dd.dir/CheckFunctionExists.c.o  -o cmTC_ca3dd -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6a1e5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6a1e5.dir/build.make CMakeFiles/cmTC_6a1e5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6a1e5.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_6a1e5.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6a1e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a1e5.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_6a1e5.dir/src.cxx.o  -o cmTC_6a1e5 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2a6f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2a6f5.dir/build.make CMakeFiles/cmTC_2a6f5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2a6f5.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2a6f5.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2a6f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a6f5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2a6f5.dir/CheckIncludeFile.c.o  -o cmTC_2a6f5 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_71331/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71331.dir/build.make CMakeFiles/cmTC_71331.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71331.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_71331.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_71331
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71331.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_71331.dir/CheckFunctionExists.c.o  -o cmTC_71331 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_516e6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_516e6.dir/build.make CMakeFiles/cmTC_516e6.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_516e6.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_516e6.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_516e6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_516e6.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_516e6.dir/src.cxx.o  -o cmTC_516e6 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b6fec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b6fec.dir/build.make CMakeFiles/cmTC_b6fec.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b6fec.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_b6fec.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b6fec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6fec.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b6fec.dir/CheckIncludeFile.c.o  -o cmTC_b6fec -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7eb58/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7eb58.dir/build.make CMakeFiles/cmTC_7eb58.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7eb58.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7eb58.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7eb58
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7eb58.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_7eb58.dir/CheckFunctionExists.c.o  -o cmTC_7eb58 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_23004/fast"
+/usr/bin/make -f CMakeFiles/cmTC_23004.dir/build.make CMakeFiles/cmTC_23004.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_23004.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_23004.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_23004
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23004.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_23004.dir/src.cxx.o  -o cmTC_23004 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3396b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3396b.dir/build.make CMakeFiles/cmTC_3396b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3396b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_3396b.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3396b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3396b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3396b.dir/CheckIncludeFile.c.o  -o cmTC_3396b -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eddf1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eddf1.dir/build.make CMakeFiles/cmTC_eddf1.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eddf1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eddf1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eddf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eddf1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_eddf1.dir/CheckFunctionExists.c.o  -o cmTC_eddf1 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_09d9e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_09d9e.dir/build.make CMakeFiles/cmTC_09d9e.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_09d9e.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_09d9e.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_09d9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09d9e.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_09d9e.dir/src.cxx.o  -o cmTC_09d9e -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_485a4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_485a4.dir/build.make CMakeFiles/cmTC_485a4.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_485a4.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_485a4.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_485a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_485a4.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_485a4.dir/CheckIncludeFile.c.o  -o cmTC_485a4 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d2730/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d2730.dir/build.make CMakeFiles/cmTC_d2730.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2730.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d2730.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2730
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2730.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d2730.dir/CheckFunctionExists.c.o  -o cmTC_d2730 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6821c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6821c.dir/build.make CMakeFiles/cmTC_6821c.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6821c.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_6821c.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6821c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6821c.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_6821c.dir/src.cxx.o  -o cmTC_6821c -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_abb2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_abb2c.dir/build.make CMakeFiles/cmTC_abb2c.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_abb2c.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_abb2c.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_abb2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abb2c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_abb2c.dir/CheckIncludeFile.c.o  -o cmTC_abb2c -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_16fc7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_16fc7.dir/build.make CMakeFiles/cmTC_16fc7.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16fc7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_16fc7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_16fc7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16fc7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_16fc7.dir/CheckFunctionExists.c.o  -o cmTC_16fc7 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_107aa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_107aa.dir/build.make CMakeFiles/cmTC_107aa.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_107aa.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_107aa.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_107aa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_107aa.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_107aa.dir/src.cxx.o  -o cmTC_107aa -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ffd4f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ffd4f.dir/build.make CMakeFiles/cmTC_ffd4f.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ffd4f.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_ffd4f.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ffd4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffd4f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ffd4f.dir/CheckIncludeFile.c.o  -o cmTC_ffd4f -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_86acc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_86acc.dir/build.make CMakeFiles/cmTC_86acc.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_86acc.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_86acc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_86acc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86acc.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_86acc.dir/CheckFunctionExists.c.o  -o cmTC_86acc -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_75e75/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75e75.dir/build.make CMakeFiles/cmTC_75e75.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_75e75.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_75e75.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_75e75
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75e75.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_75e75.dir/src.cxx.o  -o cmTC_75e75 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4d643/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4d643.dir/build.make CMakeFiles/cmTC_4d643.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4d643.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_4d643.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4d643
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d643.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_4d643.dir/CheckIncludeFile.c.o  -o cmTC_4d643 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_658bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_658bc.dir/build.make CMakeFiles/cmTC_658bc.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_658bc.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_658bc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_658bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_658bc.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_658bc.dir/CheckFunctionExists.c.o  -o cmTC_658bc -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b6b29/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b6b29.dir/build.make CMakeFiles/cmTC_b6b29.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b6b29.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_b6b29.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b6b29
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6b29.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_b6b29.dir/src.cxx.o  -o cmTC_b6b29 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ac084/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ac084.dir/build.make CMakeFiles/cmTC_ac084.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ac084.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_ac084.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ac084
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac084.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ac084.dir/CheckIncludeFile.c.o  -o cmTC_ac084 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_31b25/fast"
+/usr/bin/make -f CMakeFiles/cmTC_31b25.dir/build.make CMakeFiles/cmTC_31b25.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_31b25.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_31b25.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_31b25
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31b25.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_31b25.dir/CheckFunctionExists.c.o  -o cmTC_31b25 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_69c3d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_69c3d.dir/build.make CMakeFiles/cmTC_69c3d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_69c3d.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_69c3d.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_69c3d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69c3d.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_69c3d.dir/src.cxx.o  -o cmTC_69c3d -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dc81b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dc81b.dir/build.make CMakeFiles/cmTC_dc81b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc81b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_dc81b.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_dc81b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc81b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_dc81b.dir/CheckIncludeFile.c.o  -o cmTC_dc81b -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_211d6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_211d6.dir/build.make CMakeFiles/cmTC_211d6.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_211d6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_211d6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_211d6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_211d6.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_211d6.dir/CheckFunctionExists.c.o  -o cmTC_211d6 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f47f2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f47f2.dir/build.make CMakeFiles/cmTC_f47f2.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f47f2.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_f47f2.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f47f2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f47f2.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_f47f2.dir/src.cxx.o  -o cmTC_f47f2 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c0b48/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c0b48.dir/build.make CMakeFiles/cmTC_c0b48.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c0b48.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c0b48.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c0b48
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0b48.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c0b48.dir/CheckIncludeFile.c.o  -o cmTC_c0b48 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ddebe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ddebe.dir/build.make CMakeFiles/cmTC_ddebe.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ddebe.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ddebe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ddebe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddebe.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ddebe.dir/CheckFunctionExists.c.o  -o cmTC_ddebe -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6df71/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6df71.dir/build.make CMakeFiles/cmTC_6df71.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6df71.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_6df71.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6df71
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6df71.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_6df71.dir/src.cxx.o  -o cmTC_6df71 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6694b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6694b.dir/build.make CMakeFiles/cmTC_6694b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6694b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6694b.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6694b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6694b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6694b.dir/CheckIncludeFile.c.o  -o cmTC_6694b -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aab3a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aab3a.dir/build.make CMakeFiles/cmTC_aab3a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aab3a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_aab3a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aab3a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aab3a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_aab3a.dir/CheckFunctionExists.c.o  -o cmTC_aab3a -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1cd95/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1cd95.dir/build.make CMakeFiles/cmTC_1cd95.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1cd95.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_1cd95.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1cd95
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1cd95.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_1cd95.dir/src.cxx.o  -o cmTC_1cd95 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_66974/fast"
+/usr/bin/make -f CMakeFiles/cmTC_66974.dir/build.make CMakeFiles/cmTC_66974.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66974.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_66974.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_66974
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66974.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_66974.dir/CheckIncludeFile.c.o  -o cmTC_66974 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_edfe0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_edfe0.dir/build.make CMakeFiles/cmTC_edfe0.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_edfe0.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_edfe0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_edfe0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edfe0.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_edfe0.dir/CheckFunctionExists.c.o  -o cmTC_edfe0 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_380c8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_380c8.dir/build.make CMakeFiles/cmTC_380c8.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_380c8.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_380c8.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_380c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_380c8.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_380c8.dir/src.cxx.o  -o cmTC_380c8 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8ab6b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8ab6b.dir/build.make CMakeFiles/cmTC_8ab6b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8ab6b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8ab6b.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8ab6b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ab6b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8ab6b.dir/CheckIncludeFile.c.o  -o cmTC_8ab6b -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c4df9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4df9.dir/build.make CMakeFiles/cmTC_c4df9.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4df9.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c4df9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c4df9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4df9.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c4df9.dir/CheckFunctionExists.c.o  -o cmTC_c4df9 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4a79/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a4a79.dir/build.make CMakeFiles/cmTC_a4a79.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a4a79.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_a4a79.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a4a79
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4a79.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_a4a79.dir/src.cxx.o  -o cmTC_a4a79 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db676/fast"
+/usr/bin/make -f CMakeFiles/cmTC_db676.dir/build.make CMakeFiles/cmTC_db676.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db676.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_db676.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_db676
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db676.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_db676.dir/CheckIncludeFile.c.o  -o cmTC_db676 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_48ee8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_48ee8.dir/build.make CMakeFiles/cmTC_48ee8.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_48ee8.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_48ee8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_48ee8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48ee8.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_48ee8.dir/CheckFunctionExists.c.o  -o cmTC_48ee8 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2fc3d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2fc3d.dir/build.make CMakeFiles/cmTC_2fc3d.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2fc3d.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_2fc3d.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2fc3d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fc3d.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_2fc3d.dir/src.cxx.o  -o cmTC_2fc3d -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_380d7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_380d7.dir/build.make CMakeFiles/cmTC_380d7.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_380d7.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_380d7.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_380d7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_380d7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_380d7.dir/CheckIncludeFile.c.o  -o cmTC_380d7 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7d9f3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7d9f3.dir/build.make CMakeFiles/cmTC_7d9f3.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7d9f3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7d9f3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7d9f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d9f3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_7d9f3.dir/CheckFunctionExists.c.o  -o cmTC_7d9f3 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_189b7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_189b7.dir/build.make CMakeFiles/cmTC_189b7.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_189b7.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_189b7.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_189b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_189b7.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_189b7.dir/src.cxx.o  -o cmTC_189b7 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f08cb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f08cb.dir/build.make CMakeFiles/cmTC_f08cb.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f08cb.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f08cb.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f08cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f08cb.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f08cb.dir/CheckIncludeFile.c.o  -o cmTC_f08cb -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_03dd3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_03dd3.dir/build.make CMakeFiles/cmTC_03dd3.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_03dd3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_03dd3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_03dd3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03dd3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_03dd3.dir/CheckFunctionExists.c.o  -o cmTC_03dd3 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_caefe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_caefe.dir/build.make CMakeFiles/cmTC_caefe.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_caefe.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_caefe.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_caefe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_caefe.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_caefe.dir/src.cxx.o  -o cmTC_caefe -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_29f66/fast"
+/usr/bin/make -f CMakeFiles/cmTC_29f66.dir/build.make CMakeFiles/cmTC_29f66.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_29f66.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_29f66.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_29f66
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29f66.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_29f66.dir/CheckIncludeFile.c.o  -o cmTC_29f66 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d4ea1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d4ea1.dir/build.make CMakeFiles/cmTC_d4ea1.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d4ea1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d4ea1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d4ea1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4ea1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d4ea1.dir/CheckFunctionExists.c.o  -o cmTC_d4ea1 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b6379/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b6379.dir/build.make CMakeFiles/cmTC_b6379.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b6379.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_b6379.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b6379
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6379.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_b6379.dir/src.cxx.o  -o cmTC_b6379 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_554f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_554f5.dir/build.make CMakeFiles/cmTC_554f5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_554f5.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_554f5.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_554f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_554f5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_554f5.dir/CheckIncludeFile.c.o  -o cmTC_554f5 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_71f07/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71f07.dir/build.make CMakeFiles/cmTC_71f07.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71f07.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_71f07.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_71f07
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71f07.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_71f07.dir/CheckFunctionExists.c.o  -o cmTC_71f07 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7056a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7056a.dir/build.make CMakeFiles/cmTC_7056a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7056a.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_7056a.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7056a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7056a.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_7056a.dir/src.cxx.o  -o cmTC_7056a -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4f002/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4f002.dir/build.make CMakeFiles/cmTC_4f002.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4f002.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_4f002.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4f002
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f002.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_4f002.dir/CheckIncludeFile.c.o  -o cmTC_4f002 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_648df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_648df.dir/build.make CMakeFiles/cmTC_648df.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_648df.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_648df.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_648df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_648df.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_648df.dir/CheckFunctionExists.c.o  -o cmTC_648df -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a013f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a013f.dir/build.make CMakeFiles/cmTC_a013f.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a013f.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_a013f.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a013f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a013f.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_a013f.dir/src.cxx.o  -o cmTC_a013f -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cc4a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cc4a0.dir/build.make CMakeFiles/cmTC_cc4a0.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cc4a0.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_cc4a0.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_cc4a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc4a0.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_cc4a0.dir/CheckIncludeFile.c.o  -o cmTC_cc4a0 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b1f8f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b1f8f.dir/build.make CMakeFiles/cmTC_b1f8f.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b1f8f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b1f8f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b1f8f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1f8f.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b1f8f.dir/CheckFunctionExists.c.o  -o cmTC_b1f8f -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_45bec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_45bec.dir/build.make CMakeFiles/cmTC_45bec.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_45bec.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_45bec.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_45bec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45bec.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_45bec.dir/src.cxx.o  -o cmTC_45bec -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_83295/fast"
+/usr/bin/make -f CMakeFiles/cmTC_83295.dir/build.make CMakeFiles/cmTC_83295.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83295.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_83295.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_83295
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83295.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_83295.dir/CheckIncludeFile.c.o  -o cmTC_83295 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f7ca5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f7ca5.dir/build.make CMakeFiles/cmTC_f7ca5.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f7ca5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f7ca5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f7ca5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7ca5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f7ca5.dir/CheckFunctionExists.c.o  -o cmTC_f7ca5 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_32e30/fast"
+/usr/bin/make -f CMakeFiles/cmTC_32e30.dir/build.make CMakeFiles/cmTC_32e30.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_32e30.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_32e30.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_32e30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32e30.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_32e30.dir/src.cxx.o  -o cmTC_32e30 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5051b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5051b.dir/build.make CMakeFiles/cmTC_5051b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5051b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_5051b.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5051b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5051b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_5051b.dir/CheckIncludeFile.c.o  -o cmTC_5051b -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3826a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3826a.dir/build.make CMakeFiles/cmTC_3826a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3826a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3826a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3826a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3826a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3826a.dir/CheckFunctionExists.c.o  -o cmTC_3826a -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_007da/fast"
+/usr/bin/make -f CMakeFiles/cmTC_007da.dir/build.make CMakeFiles/cmTC_007da.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_007da.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_007da.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_007da
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_007da.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_007da.dir/src.cxx.o  -o cmTC_007da -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_50032/fast"
+/usr/bin/make -f CMakeFiles/cmTC_50032.dir/build.make CMakeFiles/cmTC_50032.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_50032.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_50032.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_50032
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50032.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_50032.dir/CheckIncludeFile.c.o  -o cmTC_50032 -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_440e0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_440e0.dir/build.make CMakeFiles/cmTC_440e0.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_440e0.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_440e0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_440e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_440e0.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_440e0.dir/CheckFunctionExists.c.o  -o cmTC_440e0 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1a011/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1a011.dir/build.make CMakeFiles/cmTC_1a011.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1a011.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_1a011.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1a011
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a011.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_1a011.dir/src.cxx.o  -o cmTC_1a011 -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_75a5b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75a5b.dir/build.make CMakeFiles/cmTC_75a5b.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_75a5b.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_75a5b.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_75a5b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75a5b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_75a5b.dir/CheckIncludeFile.c.o  -o cmTC_75a5b -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_029b6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_029b6.dir/build.make CMakeFiles/cmTC_029b6.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_029b6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_029b6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_029b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_029b6.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_029b6.dir/CheckFunctionExists.c.o  -o cmTC_029b6 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a38a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a38a.dir/build.make CMakeFiles/cmTC_0a38a.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0a38a.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_0a38a.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0a38a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a38a.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_0a38a.dir/src.cxx.o  -o cmTC_0a38a -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_24ccb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_24ccb.dir/build.make CMakeFiles/cmTC_24ccb.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24ccb.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_24ccb.dir/CheckIncludeFile.c.o   -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_24ccb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24ccb.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_24ccb.dir/CheckIncludeFile.c.o  -o cmTC_24ccb -rdynamic 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_125a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_125a7.dir/build.make CMakeFiles/cmTC_125a7.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_125a7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_125a7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_125a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_125a7.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_125a7.dir/CheckFunctionExists.c.o  -o cmTC_125a7 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test GFLAGS_IN_GOOGLE_NAMESPACE succeeded with the following output:
+Change Dir: /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4d89e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4d89e.dir/build.make CMakeFiles/cmTC_4d89e.dir/build
+make[1]: Entering directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4d89e.dir/src.cxx.o
+/usr/bin/c++     -DGFLAGS_IN_GOOGLE_NAMESPACE   -o CMakeFiles/cmTC_4d89e.dir/src.cxx.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4d89e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d89e.dir/link.txt --verbose=1
+/usr/bin/c++    -DGFLAGS_IN_GOOGLE_NAMESPACE    CMakeFiles/cmTC_4d89e.dir/src.cxx.o  -o cmTC_4d89e -rdynamic /usr/lib/x86_64-linux-gnu/libgflags.so -lpthread 
+make[1]: Leaving directory '/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <gflags/gflags.h>
+     int main(int argc, char * argv[]) {
+       google::ParseCommandLineFlags(&argc, &argv, true);
+       return 0;
+     }

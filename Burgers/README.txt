@@ -12,6 +12,7 @@
  --   burgers_4dvar.h/cpp: classes/structs to run burgers 4dvar & weak-constraint 4dvar
  --   run_burgers_4dvar.cpp: main code to run burgers 4dvar/weak-constraint 4dvar DA (run_burgers_4dvar.x executable)
  --   template.conf:  the config file template (for burgers model & slam & 4dvar)
+ --   test*.cpp:  ignore these files, these are for simple test
  
  - obs_gen/: Python code
  --   FlexGenObs.py: code to generate obs (from model state)
@@ -21,27 +22,24 @@
  --   FlexGenCov.py:  code to generate Covariance and its square-root (i.e. Modes) (for 4dvar run) 
  --   fgcov_conf.json: config file
 
- - scripts/: Python code, some useful tools
+ - fake_obs/: ignore that, used for generate obs from model state, not used now
+ 
+
+ - scripts/: Python code, some useful tools. To see how to use it, just type <name_of_script> without any argument, it will printout help info
  --   ShortSummaryDiff.py: summarize diff (rmse) between 2 model state bin files
  --   ExtractAPeriod.py: extract 1 or more time slice/slices from a bin file
  --   QuickPlots.py: run inside a 4dvar or slam running directory (after 4dvar or slam finished), to generate "images/" directory
  --   LinkAllQt.py: link all needed Qt files to a Cov Modes file 
+ --   AddGaussianNoise.py: add a gaussian noise (independent with each other) to a model state file (*.bin), and output
+ --   QuickPlotATimeStep.py: Just plot one time step
 
  - build/: to build burgers model
  
  - build_ceres/: to build burgers slam
 
- - test/: common test cases
+ - test/: simple test cases. ignore
 
-3. how to run:
- - compile: 
- --  cd build,  make clean,  make
- --  cd build_ceres, rm CMakeCache.txt,  cmake .,  make
+ - expt/: all experiments, check its README.txt to see more
 
- - run burgers model:
- --  cd test/normal_run, cp ../../src/template.conf burgers_conf.in,  <modify burgers_conf.in>,  ./run_burgers.x
-
- - run burgers slam:
- --  prepare obs:  cd test/obs_gen_test/,  cp ../../obs_gen/fgobs_conf.json ., <modify fgobs_conf.json>,  FlexGenObs.py <parameters>
- --  extract the window size from normal_run: use ExtractAPeriod.py
- --  run slam:  modify burgers_conf.in, ./run_burgers_slam.x
+3. how to compile & run:
+   see: HOW_TO_COMPILE_RUN.txt

@@ -3,3 +3,19 @@ setting1:
 setting2:
     use real model as truth, but an offset step to create initial error
     (truth: 180-268.bin, background:200-288.bin)
+
+QtEstimate: 
+- not for data assimilation
+- just see how covariance evolve, for stochastic Burgers models
+- by running a large number of ensemble, with same IC, but each one is stochastic version (i.e. noise added at each time-step)
+
+BtEstimate:
+- similar to QtEstimate
+- But not adding noise at each time-step, just initial time has noise, to see what initial time error grow
+
+NumericScheme:
+- try how the 2 schemes differ in the integration result. i.e. same IC, but with 2 schemes. 
+IC can be
+ -- just the full field
+ -- full field + random independent noise
+ -- full field + random but smooth noise

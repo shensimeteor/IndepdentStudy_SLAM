@@ -381,7 +381,6 @@ template <typename T> bool CostFunctor_4DVar_FullObs::operator()(T const* const*
         bgt->advanceStep();
         istep = bgt->getIstep();
     }
-    cout<<"run finish"<<endl;
     return true;
 }
 
@@ -483,8 +482,8 @@ CostFunction* CostFunctor_Weak4DVar_FullObs::createDynamicAutoDiffCostFunction(C
     int w_size = B0->n_mode;
     int n_obs = obstg->n_obs;
     CostFunctor_Weak4DVar_FullObs* functor = new CostFunctor_Weak4DVar_FullObs(B0, obstg, bg, xb0, Qts);
-    DynamicAutoDiffCostFunction<CostFunctor_Weak4DVar_FullObs, 4>* cost_function = new 
-        DynamicAutoDiffCostFunction<CostFunctor_Weak4DVar_FullObs, 4>(functor);
+    DynamicAutoDiffCostFunction<CostFunctor_Weak4DVar_FullObs, 8>* cost_function = new 
+        DynamicAutoDiffCostFunction<CostFunctor_Weak4DVar_FullObs, 8>(functor);
     //parameter: w0
     cost_function->AddParameterBlock(B0->n_mode);
 //    cout<<B0->n_mode<<endl;
