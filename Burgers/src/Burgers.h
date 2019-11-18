@@ -56,7 +56,8 @@ public:
 
     void advanceNStepsAndOutputBin(int N, const char* file, int output_step_t=1, int output_step_x=1); //advance and output, so that no need to save every step in memory. will output X[N+1][nx], if both output_step_t/x == 1
 
-    static double** readXs(const char* file, int Nt, int Nx); //Xs[Nt+1][Nx]
+    static double** readXs(const char* file, int Nt, int Nx); // Xs[Nt+1][Nx]
+    static double* readX(const char* file, int Nx); //read X[Nx]
     static void writeXs(const char* file, double** Xs, int Nt, int Nx); //Xs[Nt+1][Nx]
     
     void outputConfig(const char* config_file);

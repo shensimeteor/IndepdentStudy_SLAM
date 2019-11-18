@@ -32,6 +32,8 @@ Burgers_SLAM::Burgers_SLAM(const char* config_file, const char* config_path){
             this->xb0_constraint = slamda["xb0_constraint"];
         if(slamda.exists("xb0_err_stdv"))
             this->xb0_err_stdv = slamda["xb0_err_stdv"];
+        if(slamda.exists("xb0_err_stdv_file"))
+            slamda.lookupValue("xb0_err_stdv_file", this->xb0_err_stdv_file);
         if(slamda.exists("proc_err_stdv"))
             this->proc_err_stdv = slamda["proc_err_stdv"];
         if(slamda.exists("max_num_iterations"))

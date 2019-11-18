@@ -25,6 +25,7 @@ public:
     string xas_file;
     bool xb0_constraint = false;
     double xb0_err_stdv = 0.05;
+    string xb0_err_stdv_file="";
     double proc_err_stdv = 0.05;
     bool xneighbor_constraint = false;
     bool xneighbor_only_x0 = false;  //only x0 not work well

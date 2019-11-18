@@ -296,7 +296,7 @@ void Burgers::advanceNStepsAndOutputBin(int N, const char* file, int output_step
 }
 
 
-//real Xs in file, [Nx+1][Nt]
+//real Xs in file, [Nt+1][Nx]
 double** Burgers::readXs(const char* file, int Nt, int Nx){
     std::ifstream f(file, std::ios::in | std::ios::binary);
     if(!f){
@@ -311,8 +311,19 @@ double** Burgers::readXs(const char* file, int Nt, int Nx){
         return x;
     }
 }
-        
 
+//read X in file, [Nx]
+double* Burgers::readX(const char* file, int Nx){
+    std::ifstream f(file, std::ios::in | std::ios::binary);
+    if(!f){
+        printf("file not found!\n");
+        exit(1);
+    }else{
+        double* x = new double[Nx];
+        f.read((char*)x, Nx*sizeof(double));
+        return x;
+    }
+}
 
 void Burgers::writeXs(const char* file, double** Xs, int Nt, int Nx){
     std::ofstream f(file, std::ios::out|std::ios::binary);

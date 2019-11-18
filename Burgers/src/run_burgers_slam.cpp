@@ -80,8 +80,17 @@ int main(int argc, char** argv) {
     // -3. initial background constraint (optional)
     int cnt_resiblock_x0 = 0;
     if(bgslam.xb0_constraint){
-        double xb0_err_var = bgslam.xb0_err_stdv * bgslam.xb0_err_stdv; 
+        double* xb0_err_stdv_array; // xb0 error stdv array [Nx]
+        if (!bgslam.xb0_err_stdv_file.empty()) {
+            xb0_err_stdv_array = bg.readX(bgslam.xb0_err_stdv_file.c_str(), nx);
+        } else {
+            xb0_err_stdv_array = new double[nx];
+            for (int i=0; i<nx; i++) {
+                xb0_err_stdv_array[i] = bgslam.xb0_err_stdv;
+            }
+        }
         for(int i=0; i<nx; i++){
+            double xb0_err_var = pow(xb0_err_stdv_array[i],2);
             CostFunction* cost_functionX0 = CostFunctorX0::createAutoDiffCostFunction(xb0_err_var, Xs[0][i]);
             ResidualBlockId id = problem.AddResidualBlock(cost_functionX0, NULL, &Xs[0][i]);
             resblock_ids.push_back(id);
