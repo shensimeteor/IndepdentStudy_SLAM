@@ -21,6 +21,67 @@ using ceres::ResidualBlockId;
 using namespace std;
 using namespace libconfig;
 
+void CovModel::load(const char* cov_mode_file, int nx){
+    std::ifstream f(cov_mode_file, std::ios::in | std::ios::binary);
+    if(!f){
+        printf("file not found -- %s!\n", cov_mode_file);
+        exit(1);
+    }else{
+        /*
+        this->nx = nx;
+        f.seekg(0, f.end);
+        int length = f.tellg();
+        f.seekg(0, f.beg);
+        this->n_mode = (length/(8*nx));
+        this->modes = new double*[n_mode];
+        printf("Cov Modes number = %d\n", this->n_mode);
+        for(int i=0; i<n_mode; i++){
+            this->modes[i]=new double[nx];
+            f.read((char*)modes[i], nx*sizeof(double));
+        }
+        f.close(); */
+        this->nx = nx;
+        f.seekg(0, f.beg);
+        std::vector<double*> vec; 
+        while(f.peek()!=EOF){
+            double* x = new double[nx];
+            f.read((char*)x, nx*sizeof(double));
+            vec.push_back(x);
+        }
+        //printf("vector_size = %d\n", vec.size());
+        this->n_mode = vec.size();
+        this->modes = new double*[n_mode];
+        for(int i=0; i<this->n_mode; i++){
+            this->modes[i] = vec[i];
+        }
+    }
+}
+
+//cov_mode_file, matrix of [nx][n_mode]
+CovModel::CovModel(const char* cov_mode_file, int nx){
+    this->load(cov_mode_file, nx);
+}
+
+void CovModel::inflate(double inflator) {
+    double sqrt_inflator = sqrt(inflator);
+    for(int i=0; i<n_mode; i++){
+        for(int j=0; j<nx; j++){
+            modes[i][j] *= sqrt_inflator;
+        }
+    }
+}
+
+
+// xb0 <- xb0 + Modes*w
+void CovModel::updateXb0byW(double* w, double* xb0){
+    int nw = this->n_mode;
+    for(int i=0; i<nx; i++){
+        for(int j=0; j<nw; j++){
+            xb0[i]+= w[j] * modes[j][i];
+        }
+    }
+}
+
 //Burgers_SLAM
 Burgers_4DVar::Burgers_4DVar(const char* config_file, const char* config_path){
     Config cfg;
@@ -73,12 +134,7 @@ CovModel* Burgers_4DVar::readQt(int nx, int t){
 }
 
 CovModel* Burgers_4DVar::inflate(CovModel* B0, double inflator){
-    double sqrt_inflator= sqrt(inflator);
-    for(int i=0; i<B0->n_mode; i++){
-        for(int j=0; j<B0->nx; j++){
-            B0->modes[i][j] *= sqrt_inflator;
-        }
-    }
+    B0->inflate(inflator);
     return B0;
 }
 
@@ -107,58 +163,6 @@ CovModel* Burgers_4DVar::check_read_inflate_allQts(ObsTimeGrouper* obstg, int nx
     return ptr_qts;    
 }
 
-
-void CovModel::load(const char* cov_mode_file, int nx){
-    std::ifstream f(cov_mode_file, std::ios::in | std::ios::binary);
-    if(!f){
-        printf("file not found -- %s!\n", cov_mode_file);
-        exit(1);
-    }else{
-        /*
-        this->nx = nx;
-        f.seekg(0, f.end);
-        int length = f.tellg();
-        f.seekg(0, f.beg);
-        this->n_mode = (length/(8*nx));
-        this->modes = new double*[n_mode];
-        printf("Cov Modes number = %d\n", this->n_mode);
-        for(int i=0; i<n_mode; i++){
-            this->modes[i]=new double[nx];
-            f.read((char*)modes[i], nx*sizeof(double));
-        }
-        f.close(); */
-        this->nx = nx;
-        f.seekg(0, f.beg);
-        vector<double*> vec; 
-        while(f.peek()!=EOF){
-            double* x = new double[nx];
-            f.read((char*)x, nx*sizeof(double));
-            vec.push_back(x);
-        }
-        printf("vector_size = %d\n", vec.size());
-        this->n_mode = vec.size();
-        this->modes = new double*[n_mode];
-        for(int i=0; i<this->n_mode; i++){
-            this->modes[i] = vec[i];
-        }
-    }
-}
-
-//cov_mode_file, matrix of [nx][n_mode]
-CovModel::CovModel(const char* cov_mode_file, int nx){
-    this->load(cov_mode_file, nx);
-}
-
-// xb0 <- xb0 + Modes*w
-void CovModel::updateXb0byW(double* w, double* xb0){
-    int nw = this->n_mode;
-    for(int i=0; i<nx; i++){
-        for(int j=0; j<nw; j++){
-            xb0[i]+= w[j] * modes[j][i];
-        }
-    }
-}
-       
 
 ObsTimeGrouper::ObsTimeGrouper(int window_steps, int steps_unit, int start_step, int left_range_steps, int right_range_steps){
     this->window_steps = window_steps;

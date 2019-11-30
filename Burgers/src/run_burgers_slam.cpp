@@ -38,6 +38,15 @@ int main(int argc, char** argv) {
     Observations obss;
     obss.load(bgslam.obs_file.c_str());
     cout<< "[log] Read Obs from " << bgslam.obs_file << ";  n_obs = " << obss.nobs << endl;
+
+    double* xb0; 
+    if (!bgslam.xb0_file.empty()) {
+        xb0 = bg.readX(bgslam.xb0_file.c_str(), bg.getNx());
+        cout<< "[log] Read xb0 (separately) from "<<bgslam.xb0_file << endl;
+        cout<< " -- xbs provides initial guess, xb0 provides initial background constraint" <<endl;
+    } else {
+        xb0 = Xs[0];
+    }
     
     // Build the problem.
     Problem problem;
@@ -61,6 +70,7 @@ int main(int argc, char** argv) {
             cnt_resiblock_proc++;
         }
     }
+    cout<< "[log] model-error term is added" << endl;
     
     // -2. Observation Contraints
     int cnt_resiblock_obs = 0;
@@ -76,27 +86,65 @@ int main(int argc, char** argv) {
         resblock_ids.push_back(id);
         cnt_resiblock_obs++;
     }
+    cout<< "[log] obs-error term is added" << endl;
     
     // -3. initial background constraint (optional)
-    int cnt_resiblock_x0 = 0;
-    if(bgslam.xb0_constraint){
-        double* xb0_err_stdv_array; // xb0 error stdv array [Nx]
-        if (!bgslam.xb0_err_stdv_file.empty()) {
-            xb0_err_stdv_array = bg.readX(bgslam.xb0_err_stdv_file.c_str(), nx);
-        } else {
-            xb0_err_stdv_array = new double[nx];
-            for (int i=0; i<nx; i++) {
-                xb0_err_stdv_array[i] = bgslam.xb0_err_stdv;
+    int cnt_resiblock_x0 = 0; 
+    int cnt_resiblocK_hybrid_weak = 0; 
+    if (bgslam.option_hybrid_4dvar == "") { // no hybrid
+        if(bgslam.xb0_constraint){
+            double* xb0_err_stdv_array; // xb0 error stdv array [Nx]
+            if (!bgslam.xb0_err_stdv_file.empty()) {
+                xb0_err_stdv_array = bg.readX(bgslam.xb0_err_stdv_file.c_str(), nx);
+            } else {
+                xb0_err_stdv_array = new double[nx];
+                for (int i=0; i<nx; i++) {
+                    xb0_err_stdv_array[i] = bgslam.xb0_err_stdv;
+                }
             }
+            for(int i=0; i<nx; i++){
+                double xb0_err_var = pow(xb0_err_stdv_array[i],2);
+                CostFunction* cost_functionX0 = CostFunctorX0::createAutoDiffCostFunction(xb0_err_var, xb0[i]);
+                ResidualBlockId id = problem.AddResidualBlock(cost_functionX0, NULL, &Xs[0][i]);
+                resblock_ids.push_back(id);
+                cnt_resiblock_x0++;
+            }
+            cout <<"[log] xb0 constraint term is added -- diagonal only" << endl;
         }
-        for(int i=0; i<nx; i++){
-            double xb0_err_var = pow(xb0_err_stdv_array[i],2);
-            CostFunction* cost_functionX0 = CostFunctorX0::createAutoDiffCostFunction(xb0_err_var, Xs[0][i]);
-            ResidualBlockId id = problem.AddResidualBlock(cost_functionX0, NULL, &Xs[0][i]);
+    } else { // hybrid 4dvar+slamda
+        CovModel* covB0 = bgslam.inflate(bgslam.readB0(bg.getNx()), bgslam.B0_inflate_factor);
+        int nw = covB0->n_mode;
+        // ||w0||^2 term
+        CostFunction* cost_functionW0 = CostFunctorWb0::createDynamicAutoDiffCostFunction(nw);
+        double* w0 = new double[nw]; // w0 
+        for (int i=0; i<nw; i++) {
+            w0[i] = 0.0;
+        }
+        vector<double*> paras1;
+        paras1.clear();
+        paras1.push_back(w0);
+        ResidualBlockId id = problem.AddResidualBlock(cost_functionW0, NULL, paras1);
+        resblock_ids.push_back(id);
+        cnt_resiblock_x0 = 1;
+        cout <<"[log] xb0 constraint term is added -- w0 from hybrid-4dvar" << endl;
+        if (bgslam.option_hybrid_4dvar == "weak") {
+            // weak constraint term, ||x0-xb0-E0w0||^2
+            CostFunction* cost_functionW0X0_weak = CostFunctorX0W0_weak::createDynamicAutoDiffCostFunction(bgslam.weak_hybrid_4dvar_wstd, covB0, xb0);
+            vector<double*> paras2;
+            paras2.clear();
+            paras2.push_back(Xs[0]);
+            paras2.push_back(w0);
+            ResidualBlockId id = problem.AddResidualBlock(cost_functionW0X0_weak, NULL, paras2);
             resblock_ids.push_back(id);
-            cnt_resiblock_x0++;
+            cnt_resiblocK_hybrid_weak = 1;
+            cout <<"[log] hybrid-4dvar weak constraint term is added" << endl;
+        } else {
+            cout << "option_hybrid_4dvar = "<<bgslam.option_hybrid_4dvar<<" unsupported!" <<endl;
+            exit(1);
         }
     }
+
+
     // -4. neighbor constraint (optional)
     int cnt_resiblock_xneighbor = 0;
     if(bgslam.xneighbor_constraint){
@@ -126,7 +174,7 @@ int main(int argc, char** argv) {
     if(rbgroup_conf.output_cost_groups){
         //set groups & subgroups
         rbgroup.clear_groups();
-        rbgroup.add_groups_byComponent(cnt_resiblock_proc, cnt_resiblock_obs, cnt_resiblock_x0, cnt_resiblock_xneighbor);
+        rbgroup.add_groups_byComponent(cnt_resiblock_proc, cnt_resiblock_obs, cnt_resiblock_x0, cnt_resiblock_xneighbor, cnt_resiblocK_hybrid_weak);
         if(rbgroup_conf.output_proc_subgroups){
             rbgroup.add_groups_proc_subgroup(cnt_resiblock_proc, rbgroup_conf.proc_subgroup_size, 0);
         }

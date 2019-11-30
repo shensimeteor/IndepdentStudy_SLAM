@@ -1,3 +1,6 @@
+#ifndef BURGERS_4DVAR_H
+#define BURGERS_4DVAR_H
+
 #include "ceres/ceres.h"
 #include "glog/logging.h"
 #include <stdio.h>
@@ -16,7 +19,6 @@ using ceres::Solver;
 using ceres::ResidualBlockId;
 using ceres::Solve;
 
-
 struct CovModel{
     int nx = 1000;
     int n_mode = 1000;
@@ -25,8 +27,8 @@ struct CovModel{
     CovModel(const char* cov_mode_file, int nx); 
     void load(const char* cov_mode_file, int nx); 
     void updateXb0byW(double* w, double* xb0);
+    void inflate(double inflator); // modes = modes*sqrt(inflator)
 };
-
 
 //to group Observations into multiple Observations objects, based on time
 class ObsTimeGrouper{
@@ -126,4 +128,4 @@ struct  CostFunctor_Weak4DVar_FullObs: public CostFunctor_4DVar_FullObs{
     static CostFunction* createDynamicAutoDiffCostFunction(CovModel* B0, ObsTimeGrouper* obstg, Burgers* bg, double* xb0, CovModel* Qt);
 };
 
-
+#endif // BURGERS_4DVAR_H

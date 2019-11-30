@@ -1,3 +1,6 @@
+#ifndef burgers_slam_h
+#define burgers_slam_h
+
 #include "ceres/ceres.h"
 #include "glog/logging.h"
 #include <stdio.h>
@@ -6,6 +9,7 @@
 #include "math.h"
 #include <libconfig.h++>
 #include <string>
+#include "burgers_4dvar.h" // use CovModel, CostFunctorWb0
 
 using namespace std;
 using ceres::AutoDiffCostFunction;
@@ -23,7 +27,8 @@ public:
     int spinup_steps=0;
     string obs_file;
     string xas_file;
-    bool xb0_constraint = false;
+    string xb0_file="";
+    bool xb0_constraint = false; // only works if option_hybrid_4dvar = false
     double xb0_err_stdv = 0.05;
     string xb0_err_stdv_file="";
     double proc_err_stdv = 0.05;
@@ -32,10 +37,17 @@ public:
     string xneighbor_constraint_xa_dxa = "xa";
     double xneighbor_diff_stdv = 0.02;
     int max_num_iterations = 10;
-    
+
+    // hybrid 4dvar slamda options:
+    string option_hybrid_4dvar = ""; // "" for no hybrid, "weak" for "weak constraint" 
+    double weak_hybrid_4dvar_wstd = 0.001; // weak hybrid 4dvar wstd (ew)
+    string cov_dir = ""; // dir of B0_Modes.bin
+    double B0_inflate_factor = 1.0;
 
     Burgers_SLAM() {}
     Burgers_SLAM(const char* config_file, const char* config_path);
+    CovModel* readB0(int nx); 
+    CovModel* inflate(CovModel* cov, double inflator);
 };
 
 
@@ -80,6 +92,43 @@ struct CostFunctorX0 {
     static CostFunction* createAutoDiffCostFunction(double init_error_variance, double init_priori);
 };
 
+// hybrid-4dvar-slamda
+
+// weak constraint: || (x0 - xb0 - E0w0)/ew ||^2
+struct CostFunctorX0W0_weak {
+    double weak_stdv; //ew
+    double* xb0; // will make a copy here
+    CovModel* B0; // won't copy here, so caller should not change B0 hereafter
+    CostFunctorX0W0_weak(double wstd, CovModel* B0, double* xb0);
+    // paras: [x0, w0] 
+    template <typename T> bool operator()(T const* const* paras, T* residual) const;
+    static CostFunction* createDynamicAutoDiffCostFunction(double wstd, CovModel* B0, double* xb0);
+};
+
+// CostFunctorProc_fwd_w0, for the 1st time-step, as w0 is needed
+/*
+struct CostFunctorProc_fwd_w0: CostFunctorProc_fwd {
+    CovModel* B0;
+    double* xb0;
+    CostFunctorProc_fwd_w0(double proc_error_variance, Burgers* bg, CovModel* B0);
+    // paras: [0]: x0, [1]: w0, [2]: lambda, residual: size of x0
+    template <typename T> bool operator()(T const* const* paras, T* residual) const;
+    static CostFunction* createDynamicAutoDiffCostFunction(CovModel* B0, double* xb0);
+}; */
+
+
+/* lagrange can't work here, because ceres assumes cost function must be in ||..||^2, form
+// new constraint term: lambda (x0-E0w0-xb), (to implement constraints: x0 = xb0 + E0w0)
+struct CostFunctorLagrange {
+    CovModel* B0;
+    double* xb0; // will make a copy, so caller is free to change xb0 later
+    CostFunctorLagrange(CovModel* B0, double* xb0);  
+    // paras: [0]: x0, [1]: w0, [2]: lambda, residual: size of x0
+    template <typename T> bool operator()(T const* const* paras, T* residual) const;
+    static CostFunction* createDynamicAutoDiffCostFunction(CovModel* B0, double* xb0);
+};
+*/
+
 //x1 - (x0+x2)/2
 struct CostFunctorXneighbor {
     double neighbor_diff_variance, neighbor_diff_sqrtinv;
@@ -108,7 +157,7 @@ struct ResiBlockGroup{
 
     void clear_groups(); //clear the groups
 
-    void add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0, int cnt_resiblock_xneighbor); //create automatic groups (by 4 components & 1 whole)
+    void add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0, int cnt_resiblock_xneighbor, int cnt_resiblock_hybrid_weak); //create automatic groups (by 4 components & 1 whole)
 
     void add_groups_proc_subgroup(int cnt_resiblock_proc, int subgroup_size, int offset=0); //create automatic groups (for proc subgroups, each subgroup has fixed size)
 
@@ -132,3 +181,5 @@ struct ResiBlockGroup_Config{
 
     ResiBlockGroup_Config(const char* config_file, const char* config_path);  //create groups from config file
 };
+
+#endif

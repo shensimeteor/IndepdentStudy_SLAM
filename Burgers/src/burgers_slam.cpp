@@ -1,4 +1,5 @@
 #include "ceres/ceres.h"
+#include "ceres/dynamic_autodiff_cost_function.h"
 #include "glog/logging.h"
 #include <stdio.h>
 #include "Burgers.h"
@@ -9,6 +10,7 @@
 #include "burgers_slam.h"
 
 using ceres::AutoDiffCostFunction;
+using ceres::DynamicAutoDiffCostFunction;
 using ceres::CostFunction;
 using ceres::Problem;
 using ceres::Solver;
@@ -46,6 +48,16 @@ Burgers_SLAM::Burgers_SLAM(const char* config_file, const char* config_path){
             slamda.lookupValue("xneighbor_constraint_xa_dxa", this->xneighbor_constraint_xa_dxa);
         if(slamda.exists("xneighbor_diff_stdv"))
             this->xneighbor_diff_stdv = slamda["xneighbor_diff_stdv"];
+        if(slamda.exists("xb0_file"))
+            slamda.lookupValue("xb0_file", this->xb0_file);
+        if(slamda.exists("option_hybrid_4dvar"))
+            slamda.lookupValue("option_hybrid_4dvar", this->option_hybrid_4dvar);
+        if(slamda.exists("weak_hybrid_4dvar_wstd"))
+            this->weak_hybrid_4dvar_wstd = slamda["weak_hybrid_4dvar_wstd"];
+        if(slamda.exists("cov_dir"))
+            slamda.lookupValue("cov_dir", this->cov_dir);
+        if(slamda.exists("B0_inflate_factor"))
+            this->B0_inflate_factor = slamda["B0_inflate_factor"];
         slamda.lookupValue("xbs_file", this->xbs_file);
         slamda.lookupValue("obs_file", this->obs_file);
         slamda.lookupValue("xas_file", this->xas_file);
@@ -60,6 +72,17 @@ Burgers_SLAM::Burgers_SLAM(const char* config_file, const char* config_path){
         cerr << "Setting Not Found "<<nfex.getPath() << endl;
         exit(1);
     }
+}
+
+CovModel* Burgers_SLAM::readB0(int nx){
+    string B0file = this->cov_dir + string("/B0_modes.bin");
+    CovModel* pcov = new CovModel(B0file.c_str(), nx);
+    return pcov;
+}
+
+CovModel* Burgers_SLAM::inflate(CovModel* B0, double inflator){
+    B0->inflate(inflator);
+    return B0;
 }
 
 
@@ -127,6 +150,52 @@ template <typename T> bool CostFunctorX0::operator()(const T* const x, T* residu
 CostFunction* CostFunctorX0::createAutoDiffCostFunction(double init_error_variance, double init_priori){
     return new AutoDiffCostFunction<CostFunctorX0, 1, 1>(new CostFunctorX0(init_error_variance, init_priori));
 }
+
+
+//CostFunctors for hybrid-4dvar-slamda
+CostFunctorX0W0_weak::CostFunctorX0W0_weak(double wstd, CovModel* B0, double* xb0) {
+    this->weak_stdv = wstd; 
+    this->B0 = B0;
+    this->xb0 = new double[B0->nx];
+    for (int i=0; i<B0->nx; i++) {
+        this->xb0[i] = xb0[i];
+    }
+}
+
+template <typename T> bool CostFunctorX0W0_weak::operator()(T const* const* paras, T* residual) const {
+    T const* x0 = paras[0];
+    T const* w0 = paras[1];
+    // xz0 = xb0 + E0w0
+    T* xz0 = new T[this->B0->nx];
+    for (int i=0; i<this->B0->nx; i++) {
+        T sum = (T)0.0;
+        for (int j=0; j<this->B0->n_mode; j++) {
+            sum = sum + w0[j] * B0->modes[j][i];
+        }
+        xz0[i] = (T) (xb0[i]) + sum;
+    }
+    //  || (x0 - xz0)/wstd ||^2 
+    for (int i=0; i<this->B0->nx; i++) {
+        residual[i] = (x0[i] - xz0[i]) / this->weak_stdv;
+    }
+    return true;
+}
+
+CostFunction* CostFunctorX0W0_weak::createDynamicAutoDiffCostFunction(double wstd, CovModel* B0, double* xb0) {
+    int w_size = B0->n_mode;
+    int x_size = B0->nx;
+    CostFunctorX0W0_weak* functor = new CostFunctorX0W0_weak(wstd, B0, xb0);
+    DynamicAutoDiffCostFunction<CostFunctorX0W0_weak, 4>* cost_function = new 
+        DynamicAutoDiffCostFunction<CostFunctorX0W0_weak, 4>(functor);
+    cost_function->AddParameterBlock(x_size);
+    cost_function->AddParameterBlock(w_size);
+    cost_function->SetNumResiduals(x_size);
+    return cost_function;
+}
+
+
+
+
 
 //CostFunctorXneighbor
 CostFunctorXneighbor::CostFunctorXneighbor(double neighbor_diff_variance, double xb0, double xb1, double xb2){
@@ -203,12 +272,19 @@ void ResiBlockGroup::clear_groups(){
 }
 
 //into groups: all_proc, all_obs, all_x0, 
-void ResiBlockGroup::add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0, int cnt_resiblock_xneighbor){
-    add_resi_block_group("all_proc", 0, cnt_resiblock_proc-1);
-    add_resi_block_group("all_obs", cnt_resiblock_proc, cnt_resiblock_proc+cnt_resiblock_obs-1);
-    add_resi_block_group("all_X0", cnt_resiblock_obs+cnt_resiblock_proc, cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0-1);
-    add_resi_block_group("all_xneighbor", cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0,  cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0+cnt_resiblock_xneighbor-1);
-    add_resi_block_group("all_all", 0, cnt_resiblock_proc+cnt_resiblock_obs+cnt_resiblock_x0+cnt_resiblock_xneighbor-1);
+void ResiBlockGroup::add_groups_byComponent(int cnt_resiblock_proc, int cnt_resiblock_obs, int cnt_resiblock_x0, int cnt_resiblock_xneighbor, int cnt_resiblock_hybrid_weak) {
+    int sum=0;
+    add_resi_block_group("all_proc", sum, sum+cnt_resiblock_proc-1);
+    sum += cnt_resiblock_proc;
+    add_resi_block_group("all_obs", sum, sum+cnt_resiblock_obs-1);
+    sum += cnt_resiblock_obs;
+    add_resi_block_group("all_X0", sum, sum+cnt_resiblock_x0-1);
+    sum += cnt_resiblock_x0;
+    add_resi_block_group("all_hybridw", sum, sum+cnt_resiblock_hybrid_weak-1);
+    sum += cnt_resiblock_hybrid_weak;
+    add_resi_block_group("all_xneighbor", sum, sum+cnt_resiblock_xneighbor-1);
+    sum += cnt_resiblock_xneighbor;
+    add_resi_block_group("all_all", 0, sum-1);
 }
 
 void ResiBlockGroup::add_groups_proc_subgroup(int cnt_resiblock_proc, int subgroup_size, int offset){

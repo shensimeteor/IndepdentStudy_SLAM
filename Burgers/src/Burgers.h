@@ -1,3 +1,6 @@
+#ifndef BURGERS_H
+#define BURGERS_H
+
 #define BC_OPTION_FIXED 1
 #define BC_OPTION_PERIOD 2
 #define LINEAR_OPTION_LINEAR 1
@@ -9,8 +12,6 @@
 #include <random>
 #include <chrono>
 
-#ifndef BURGERS_H
-#define BURGERS_H
 
 class Burgers{
 protected:
