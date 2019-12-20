@@ -15,7 +15,7 @@ include_directories(${CERES_INCLUDE_DIRS})
 
 #cartrack
 #add_executable(Ceres_Burgers ../src/Ceres_Burgers.cpp ../src/Burgers.cpp ../src/Observation.cpp)
-add_executable(run_burgers_slam.x ../src/run_burgers_slam.cpp ../src/burgers_slam.cpp ../src/Burgers.cpp ../src/Observation.cpp)
+add_executable(run_burgers_slam.x ../src/run_burgers_slam.cpp ../src/burgers_slam.cpp ../src/Burgers.cpp ../src/Observation.cpp ../src/burgers_4dvar.cpp)
 add_executable(run_burgers_4dvar.x ../src/burgers_4dvar.cpp ../src/Burgers.cpp ../src/Observation.cpp ../src/run_burgers_4dvar.cpp)
 #add_executable(test_obstimegrouper.x ../src/test_obstimegrouper.cpp ../src/burgers_4dvar.cpp ../src/Observation.cpp ../src/Burgers.cpp)
 #target_link_libraries(Ceres_Burgers ${CERES_LIBRARIES} ${CONFIG++_LIBRARY})

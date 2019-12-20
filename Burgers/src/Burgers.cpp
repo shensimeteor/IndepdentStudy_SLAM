@@ -117,6 +117,14 @@ Burgers::Burgers(const char* config_file, const char* config_path){
             }
         }
         this->nx = nx;
+        // for model erro simulation
+        if (burgers.exists("force_option")) {
+            force_option = burgers["force_option"];
+            burgers.lookupValue("force_file", this->force_file);
+        }
+        if (burgers.exists("advection_coeff")) {
+            advection_coeff = burgers["advection_coeff"];
+        }
         new (this)Burgers(nx, dx, R, dt, bc_option, bc_fixed_value, linear_option, linear_velocity, numeric_option, stochastic_option, stochastic_proc_err_mean, stochastic_proc_err_stdv, preset_seed, seed);
     }catch(const SettingNotFoundException &nfex){
         cerr << "SettingNotFound at " << nfex.getPath() << endl;
@@ -138,6 +146,14 @@ Burgers::~Burgers(){
 void Burgers::addNoiseToCurX(){
     for(int i=0; i<nx; i++){
         curX[i] += (*this->distribution)((*(this->generator)));
+    }
+}
+
+void Burgers::addForceToCurX() {
+    if (force_option == 1) {
+        for(int i=0; i<nx; i++){
+            curX[i] += force1d[i];
+        }
     }
 }
 
@@ -234,6 +250,9 @@ void Burgers::advanceStep(){
     if(stochastic_option == STOCHASTIC_OPTION_GAUSSIAN){
         this->addNoiseToCurX();
     }
+    if(force_option > 0) {
+        this->addForceToCurX();
+    }
 }
 
 void Burgers::advanceStep(double x[]){
@@ -312,6 +331,7 @@ double** Burgers::readXs(const char* file, int Nt, int Nx){
     }
 }
 
+
 //read X in file, [Nx]
 double* Burgers::readX(const char* file, int Nx){
     std::ifstream f(file, std::ios::in | std::ios::binary);
@@ -380,3 +400,12 @@ int Burgers::getIstep(){
 double* Burgers::getCurrentX(){
     return curX;
 }
+
+void Burgers::readForce() {
+    if (force_option == 2) {
+        cout << "time-varying force is not supported now" << endl;
+    } else if(force_option == 1) {
+        force1d = readX(force_file.c_str(), nx);
+    }
+}
+

@@ -153,12 +153,37 @@ CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/O
 CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.provides.build: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
 
 
+CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o: CMakeFiles/run_burgers_slam.x.dir/flags.make
+CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o: /home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o -c /home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp
+
+CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp > CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
+
+CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp -o CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
+
+CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.requires:
+
+.PHONY : CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.requires
+
+CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.provides: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.requires
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.provides.build
+.PHONY : CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.provides
+
+CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.provides.build: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
+
+
 # Object files for target run_burgers_slam.x
 run_burgers_slam_x_OBJECTS = \
 "CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.o" \
 "CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o" \
 "CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o" \
-"CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o"
+"CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o" \
+"CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o"
 
 # External object files for target run_burgers_slam.x
 run_burgers_slam_x_EXTERNAL_OBJECTS =
@@ -167,6 +192,7 @@ run_burgers_slam.x: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStud
 run_burgers_slam.x: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o
 run_burgers_slam.x: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o
 run_burgers_slam.x: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o
+run_burgers_slam.x: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
 run_burgers_slam.x: CMakeFiles/run_burgers_slam.x.dir/build.make
 run_burgers_slam.x: /usr/local/lib/libceres.a
 run_burgers_slam.x: /usr/local/lib/libconfig++.so
@@ -191,7 +217,7 @@ run_burgers_slam.x: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
 run_burgers_slam.x: /usr/lib/x86_64-linux-gnu/librt.so
 run_burgers_slam.x: /usr/lib/x86_64-linux-gnu/libcxsparse.so
 run_burgers_slam.x: CMakeFiles/run_burgers_slam.x.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable run_burgers_slam.x"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable run_burgers_slam.x"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_burgers_slam.x.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -203,6 +229,7 @@ CMakeFiles/run_burgers_slam.x.dir/requires: CMakeFiles/run_burgers_slam.x.dir/ho
 CMakeFiles/run_burgers_slam.x.dir/requires: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o.requires
 CMakeFiles/run_burgers_slam.x.dir/requires: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o.requires
 CMakeFiles/run_burgers_slam.x.dir/requires: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o.requires
+CMakeFiles/run_burgers_slam.x.dir/requires: CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o.requires
 
 .PHONY : CMakeFiles/run_burgers_slam.x.dir/requires
 

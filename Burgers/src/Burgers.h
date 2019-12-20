@@ -11,7 +11,9 @@
 #define STOCHASTIC_OPTION_GAUSSIAN 2
 #include <random>
 #include <chrono>
+#include <string>
 
+using std::string;
 
 class Burgers{
 protected:
@@ -30,10 +32,18 @@ protected:
     bool preset_seed;
     std::default_random_engine *generator;
     std::normal_distribution<double> *distribution; 
+    // for model error simulation
+    int force_option = 0; // 0: no external force term; 1: static force; 2: time-varying force
+    std::string force_file=""; // the static/time-varying force file, to be added in as right-hand
+    double advection_coeff=1.0; // the -u pu/px * coef
     
     void setConvenient();
     double *noise; 
     void addNoiseToCurX();
+    // for model error
+    double* force1d; //nx
+    void addForceToCurX();
+//    double** force2d; //[nt,nx], applied to [0, nt-1] timesteps,
 
 
 public:
@@ -65,6 +75,9 @@ public:
     int getNx();
     int getIstep();
     double* getCurrentX();
+
+    // for model error
+    void readForce(); // read force_file to force1d or force2d
 };
 
 #endif

@@ -25,6 +25,8 @@ random
 -
 chrono
 -
+string
+-
 
 /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp
 Observation.h
@@ -44,9 +46,55 @@ vector
 
 /home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.h
 
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp
+ceres/ceres.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/ceres/ceres.h
+glog/logging.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/glog/logging.h
+ceres/dynamic_autodiff_cost_function.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/ceres/dynamic_autodiff_cost_function.h
+stdio.h
+-
+Burgers.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.h
+Observation.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.h
+math.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/math.h
+fstream
+-
+libconfig.h++
+-
+burgers_4dvar.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.h
+iostream
+-
+
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.h
+ceres/ceres.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/ceres/ceres.h
+glog/logging.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/glog/logging.h
+stdio.h
+-
+Burgers.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.h
+Observation.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.h
+math.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/math.h
+libconfig.h++
+-
+vector
+-
+string
+-
+
 /home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp
 ceres/ceres.h
 /home/si/Work/IndepdentStudy_SLAM/Burgers/src/ceres/ceres.h
+ceres/dynamic_autodiff_cost_function.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/ceres/dynamic_autodiff_cost_function.h
 glog/logging.h
 /home/si/Work/IndepdentStudy_SLAM/Burgers/src/glog/logging.h
 stdio.h
@@ -81,6 +129,8 @@ libconfig.h++
 -
 string
 -
+burgers_4dvar.h
+/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.h
 
 /home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp
 ceres/ceres.h

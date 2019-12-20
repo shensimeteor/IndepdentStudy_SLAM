@@ -203,6 +203,7 @@ home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.o: home/si/Work/Indep
 # target to build an object file
 home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o:
 	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
 .PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o
 
 home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.i: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
@@ -212,6 +213,7 @@ home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.i: home/si/Work/Indep
 # target to preprocess a source file
 home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i:
 	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
 .PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.i
 
 home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.s: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
@@ -221,6 +223,7 @@ home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.s: home/si/Work/Indep
 # target to generate assembly for a file
 home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s:
 	$(MAKE) -f CMakeFiles/run_burgers_4dvar.x.dir/build.make CMakeFiles/run_burgers_4dvar.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
+	$(MAKE) -f CMakeFiles/run_burgers_slam.x.dir/build.make CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
 .PHONY : home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.s
 
 home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.o: home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o

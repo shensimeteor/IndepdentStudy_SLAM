@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o"
   "CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o"
   "CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o"
+  "CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o"
   "run_burgers_slam.x.pdb"
   "run_burgers_slam.x"
 )

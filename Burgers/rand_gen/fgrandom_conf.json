@@ -1,0 +1,30 @@
+{
+    "random_config_array":
+    [
+    {
+        "stdv": 0.05,
+        "mean": 0.02,
+        "correlation_model" : "gaussian", 
+        "nx": 1000, 
+        "nx_periodic": true,
+        "gaussian_reflen_grid": 50,
+        "on": true
+    }, 
+    {
+        "stdv": 0.03,
+        "correlation_model" : "gaussian", 
+        "nx": 1000, 
+        "nx_periodic": true,
+        "gaussian_reflen_grid": 20,
+        "on": true
+    },
+    {
+        "stdv": 0.03,
+        "correlation_model" : "white", 
+        "nx": 1000, 
+        "nx_periodic": true,
+        "gaussian_reflen_grid": 20,
+        "on": true
+    }
+    ]
+}

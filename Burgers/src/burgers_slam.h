@@ -94,6 +94,7 @@ struct CostFunctorX0 {
 
 // hybrid-4dvar-slamda
 
+/*
 // weak constraint: || (x0 - xb0 - E0w0)/ew ||^2
 struct CostFunctorX0W0_weak {
     double weak_stdv; //ew
@@ -103,6 +104,19 @@ struct CostFunctorX0W0_weak {
     // paras: [x0, w0] 
     template <typename T> bool operator()(T const* const* paras, T* residual) const;
     static CostFunction* createDynamicAutoDiffCostFunction(double wstd, CovModel* B0, double* xb0);
+};
+*/
+
+// weak constraint: element-wise (instead of vector-wise)
+struct CostFunctorX0W0_weak {
+    double weak_stdv; //ew
+    double xb0; 
+    int xidx; // index of x, in [0, nx-1] 
+    CovModel* B0; // won't copy here, so caller should not change B0 hereafter
+    CostFunctorX0W0_weak(double wstd, CovModel* B0, double xb0, int xidx);
+    // paras: [x0 (size 1), w0 (size nw)] 
+    template <typename T> bool operator()(T const* const* paras, T* residual) const;
+    static CostFunction* createDynamicAutoDiffCostFunction(double wstd, CovModel* B0, double xb0, int xidx);
 };
 
 // CostFunctorProc_fwd_w0, for the 1st time-step, as w0 is needed

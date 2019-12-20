@@ -3,6 +3,9 @@ setting1:
 setting2:
     use real model as truth, but an offset step to create initial error
     (truth: 180-268.bin, background:200-288.bin)
+setting3:
+    like setting1, also imperfect model
+    uses random noise per step, changed R, advection_coeff, force to simulate model error
 
 QtEstimate: 
 - not for data assimilation

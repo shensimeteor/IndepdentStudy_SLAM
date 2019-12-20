@@ -153,47 +153,36 @@ CostFunction* CostFunctorX0::createAutoDiffCostFunction(double init_error_varian
 
 
 //CostFunctors for hybrid-4dvar-slamda
-CostFunctorX0W0_weak::CostFunctorX0W0_weak(double wstd, CovModel* B0, double* xb0) {
+CostFunctorX0W0_weak::CostFunctorX0W0_weak(double wstd, CovModel* B0, double xb0, int xidx) {
     this->weak_stdv = wstd; 
     this->B0 = B0;
-    this->xb0 = new double[B0->nx];
-    for (int i=0; i<B0->nx; i++) {
-        this->xb0[i] = xb0[i];
-    }
+    this->xidx = xidx;
+    this->xb0 = xb0;
 }
 
 template <typename T> bool CostFunctorX0W0_weak::operator()(T const* const* paras, T* residual) const {
-    T const* x0 = paras[0];
-    T const* w0 = paras[1];
-    // xz0 = xb0 + E0w0
-    T* xz0 = new T[this->B0->nx];
-    for (int i=0; i<this->B0->nx; i++) {
-        T sum = (T)0.0;
-        for (int j=0; j<this->B0->n_mode; j++) {
-            sum = sum + w0[j] * B0->modes[j][i];
-        }
-        xz0[i] = (T) (xb0[i]) + sum;
+    T const* x0 = paras[0]; // size 1
+    T const* w0 = paras[1]; // size nw
+    // sum = xb0 + E0w0
+    T sum = (T)0.0;
+    for (int j=0; j<this->B0->n_mode; j++) {
+        sum = sum + w0[j] * B0->modes[j][xidx];
     }
     //  || (x0 - xz0)/wstd ||^2 
-    for (int i=0; i<this->B0->nx; i++) {
-        residual[i] = (x0[i] - xz0[i]) / this->weak_stdv;
-    }
+    residual[0] = (x0[0] - sum) / weak_stdv;
     return true;
 }
 
-CostFunction* CostFunctorX0W0_weak::createDynamicAutoDiffCostFunction(double wstd, CovModel* B0, double* xb0) {
+CostFunction* CostFunctorX0W0_weak::createDynamicAutoDiffCostFunction(double wstd, CovModel* B0, double xb0, int xidx) {
     int w_size = B0->n_mode;
-    int x_size = B0->nx;
-    CostFunctorX0W0_weak* functor = new CostFunctorX0W0_weak(wstd, B0, xb0);
+    CostFunctorX0W0_weak* functor = new CostFunctorX0W0_weak(wstd, B0, xb0, xidx);
     DynamicAutoDiffCostFunction<CostFunctorX0W0_weak, 4>* cost_function = new 
         DynamicAutoDiffCostFunction<CostFunctorX0W0_weak, 4>(functor);
-    cost_function->AddParameterBlock(x_size);
+    cost_function->AddParameterBlock(1);
     cost_function->AddParameterBlock(w_size);
-    cost_function->SetNumResiduals(x_size);
+    cost_function->SetNumResiduals(1);
     return cost_function;
 }
-
-
 
 
 

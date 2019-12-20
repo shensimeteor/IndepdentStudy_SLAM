@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp" "/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Burgers.cpp.o"
   "/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp" "/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/Observation.cpp.o"
+  "/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp" "/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_4dvar.cpp.o"
   "/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp" "/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/burgers_slam.cpp.o"
   "/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp" "/home/si/Work/IndepdentStudy_SLAM/Burgers/build_ceres/CMakeFiles/run_burgers_slam.x.dir/home/si/Work/IndepdentStudy_SLAM/Burgers/src/run_burgers_slam.cpp.o"
   )

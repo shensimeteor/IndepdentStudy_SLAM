@@ -129,14 +129,16 @@ int main(int argc, char** argv) {
         cout <<"[log] xb0 constraint term is added -- w0 from hybrid-4dvar" << endl;
         if (bgslam.option_hybrid_4dvar == "weak") {
             // weak constraint term, ||x0-xb0-E0w0||^2
-            CostFunction* cost_functionW0X0_weak = CostFunctorX0W0_weak::createDynamicAutoDiffCostFunction(bgslam.weak_hybrid_4dvar_wstd, covB0, xb0);
-            vector<double*> paras2;
-            paras2.clear();
-            paras2.push_back(Xs[0]);
-            paras2.push_back(w0);
-            ResidualBlockId id = problem.AddResidualBlock(cost_functionW0X0_weak, NULL, paras2);
-            resblock_ids.push_back(id);
-            cnt_resiblocK_hybrid_weak = 1;
+            for (int i=0; i<nx; i++) {
+                CostFunction* cost_functionW0X0_weak = CostFunctorX0W0_weak::createDynamicAutoDiffCostFunction(bgslam.weak_hybrid_4dvar_wstd, covB0, xb0[i], i);
+                vector<double*> paras2;
+                paras2.clear();
+                paras2.push_back(&Xs[0][i]);
+                paras2.push_back(w0);
+                ResidualBlockId id = problem.AddResidualBlock(cost_functionW0X0_weak, NULL, paras2);
+                resblock_ids.push_back(id);
+                cnt_resiblocK_hybrid_weak = 1;
+            }
             cout <<"[log] hybrid-4dvar weak constraint term is added" << endl;
         } else {
             cout << "option_hybrid_4dvar = "<<bgslam.option_hybrid_4dvar<<" unsupported!" <<endl;
